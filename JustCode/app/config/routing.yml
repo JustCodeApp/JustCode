@@ -1,3 +1,7 @@
+nav_barmenu:
+    resource: "@navBarmenuBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

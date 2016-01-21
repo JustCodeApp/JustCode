@@ -1,0 +1,5 @@
+[2016-01-14 11:19:27] request.INFO: Matched route "nav_barmenu_homepage". {"route_parameters":{"_controller":"navBar\\Bundle\\menuBundle\\Controller\\DefaultController::indexAction","_route":"nav_barmenu_homepage"},"request_uri":"http://justicodeina-hejuso.c9users.io/JustCode/web/app_dev.php/"} []
+[2016-01-14 11:19:27] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-01-14 11:21:33] request.INFO: Matched route "nav_barmenu_homepage". {"route_parameters":{"_controller":"navBar\\Bundle\\menuBundle\\Controller\\DefaultController::indexAction","_route":"nav_barmenu_homepage"},"request_uri":"http://justicodeina-hejuso.c9users.io/JustCode/web/app_dev.php/"} []
+[2016-01-14 11:21:33] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-01-14 11:21:34] request.INFO: Matched route "_wdt". {"route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"a3ac41","_route":"_wdt"},"request_uri":"http://justicodeina-hejuso.c9users.io/JustCode/web/app_dev.php/_wdt/a3ac41"} []
