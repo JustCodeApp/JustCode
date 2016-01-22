@@ -5,6 +5,24 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <!-- Bootstrap y Jquery -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        
+            <!-- Social Font Codes -->
+        <link href="{{ asset('css/socialIconsFont/creativeverse_social-codes.css')}}" rel="stylesheet" />
+        <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-embedded.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-ie7.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-ie7-codes.css') }}" />
+        
+        <!-- Otros importes -->
+        <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/actividades.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
+        <script src="{{ asset('js/menu.js') }}"></script>
+        
     </head>
     <body>
         {% block body %}{% endblock %}

@@ -1,0 +1,24 @@
+just_codeactividades_homepage:
+    path:     /
+    defaults: { _controller: JustCodeactividadesBundle:Default:index }
+
+compilator:
+    path: /compilator
+    defaults: { _controller: JustCodeactividadesBundle:Default:compilator }
+    methods:  [GET]
+    requirements:
+        id:  \d+
+        
+testType:
+    path: /testType
+    defaults: { _controller: JustCodeactividadesBundle:Default:testType }
+    methods:  [GET]
+    requirements:
+        id:  \d+
+
+verdaderofalso:
+    path: /verdaderofalso
+    defaults: { _controller: JustCodeactividadesBundle:Default:verdaderofalso }
+    methods:  [GET]
+    requirements:
+        id:  \d+

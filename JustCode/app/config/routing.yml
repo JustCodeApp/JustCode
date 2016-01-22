@@ -1,3 +1,7 @@
+just_codeactividades:
+    resource: "@JustCodeactividadesBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
