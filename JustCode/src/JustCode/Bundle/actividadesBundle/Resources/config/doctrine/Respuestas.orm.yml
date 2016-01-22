@@ -1,0 +1,28 @@
+JustCode\Bundle\actividadesBundle\Entity\Respuestas:
+    type: entity
+    table: respuestas
+    indexes:
+        IDX_5CD06EB1FE3B0D62:
+            columns:
+                - id_pregunta
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        idPregunta:
+            targetEntity: Preguntas
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_pregunta:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
