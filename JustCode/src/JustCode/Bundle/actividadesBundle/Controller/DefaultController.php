@@ -26,4 +26,11 @@ class DefaultController extends Controller
         return $this->render('JustCodeactividadesBundle:Default:verdaderofalso.html.twig');
     }
     
+    public function principalAction(){
+        
+        return $this->render('JustCodeactividadesBundle:Default:principal.html.twig');
+        
+    }
+    
+    
 }

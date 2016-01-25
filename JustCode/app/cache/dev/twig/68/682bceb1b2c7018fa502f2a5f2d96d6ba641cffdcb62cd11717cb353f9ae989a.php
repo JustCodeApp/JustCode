@@ -21,20 +21,20 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4a83ad484ef8cb9a24fb7add289535e8a1891fc0da7d420007e4fcd384490bd8 = $this->env->getExtension("native_profiler");
-        $__internal_4a83ad484ef8cb9a24fb7add289535e8a1891fc0da7d420007e4fcd384490bd8->enter($__internal_4a83ad484ef8cb9a24fb7add289535e8a1891fc0da7d420007e4fcd384490bd8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:index.html.twig"));
+        $__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296 = $this->env->getExtension("native_profiler");
+        $__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296->enter($__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4a83ad484ef8cb9a24fb7add289535e8a1891fc0da7d420007e4fcd384490bd8->leave($__internal_4a83ad484ef8cb9a24fb7add289535e8a1891fc0da7d420007e4fcd384490bd8_prof);
+        $__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296->leave($__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_711fe557b03f3773be8968f0847adff2e2e68c60a066c3ef9c53800c8a129e63 = $this->env->getExtension("native_profiler");
-        $__internal_711fe557b03f3773be8968f0847adff2e2e68c60a066c3ef9c53800c8a129e63->enter($__internal_711fe557b03f3773be8968f0847adff2e2e68c60a066c3ef9c53800c8a129e63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6 = $this->env->getExtension("native_profiler");
+        $__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6->enter($__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Esto es el índice.</h1>
@@ -66,11 +66,11 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
         // line 23
         echo "\">Verdadero y falso</a>
         </li>
-        
-    </ul>
+
+        </ul>
 ";
         
-        $__internal_711fe557b03f3773be8968f0847adff2e2e68c60a066c3ef9c53800c8a129e63->leave($__internal_711fe557b03f3773be8968f0847adff2e2e68c60a066c3ef9c53800c8a129e63_prof);
+        $__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6->leave($__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6_prof);
 
     }
 
@@ -113,6 +113,6 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
 /*         url('verdaderofalso') */
 /*         }}">Verdadero y falso</a>*/
 /*         </li>*/
-/*         */
-/*     </ul>*/
+/* */
+/*         </ul>*/
 /* {% endblock %}*/

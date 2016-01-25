@@ -21,48 +21,25 @@ class __TwigTemplate_e486d80c9b2fd71535d4ac4390af91e1419fc7e89bef08bdfafde0296d9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7f09bdd45903c9627d0452bad3cf06d7efd40653922e21ff676194b6c99946b0 = $this->env->getExtension("native_profiler");
-        $__internal_7f09bdd45903c9627d0452bad3cf06d7efd40653922e21ff676194b6c99946b0->enter($__internal_7f09bdd45903c9627d0452bad3cf06d7efd40653922e21ff676194b6c99946b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:compilator.html.twig"));
+        $__internal_04e06e9b2d836c2f23f52ca696148f6b139d4e2bed308c623e8d1122a5e10f9f = $this->env->getExtension("native_profiler");
+        $__internal_04e06e9b2d836c2f23f52ca696148f6b139d4e2bed308c623e8d1122a5e10f9f->enter($__internal_04e06e9b2d836c2f23f52ca696148f6b139d4e2bed308c623e8d1122a5e10f9f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:compilator.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7f09bdd45903c9627d0452bad3cf06d7efd40653922e21ff676194b6c99946b0->leave($__internal_7f09bdd45903c9627d0452bad3cf06d7efd40653922e21ff676194b6c99946b0_prof);
+        $__internal_04e06e9b2d836c2f23f52ca696148f6b139d4e2bed308c623e8d1122a5e10f9f->leave($__internal_04e06e9b2d836c2f23f52ca696148f6b139d4e2bed308c623e8d1122a5e10f9f_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9c0d9b16ed492b6d6fc6963c14a63b635039c8034685689c553586b3c8c35e41 = $this->env->getExtension("native_profiler");
-        $__internal_9c0d9b16ed492b6d6fc6963c14a63b635039c8034685689c553586b3c8c35e41->enter($__internal_9c0d9b16ed492b6d6fc6963c14a63b635039c8034685689c553586b3c8c35e41_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_94826711c4a8192e55015bcbe92b3195e315df1926aad0995be937adfaa502d4 = $this->env->getExtension("native_profiler");
+        $__internal_94826711c4a8192e55015bcbe92b3195e315df1926aad0995be937adfaa502d4->enter($__internal_94826711c4a8192e55015bcbe92b3195e315df1926aad0995be937adfaa502d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
 <div class=\"wrapper\">
-<!-- Menú -->
 
-    <div class=\"navbar navbar-inverse navbar-fixed-top\" >
-        <div class=\"container\">
-            <div class=\"navbar-header\">
-                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">
-                    <span class=\"icon-bar\"></span>
-                    <span class=\"icon-bar\"></span>
-                    <span class=\"icon-bar\"></span>
-                </button>
-                <div class=\"logo\"><a class=\"navbar-brand\" href=\"#\"><img src=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/logoblanco.png"), "html", null, true);
-        echo "\" /></a></div>
-            </div>
-            <div class=\"navbar-collapse collapse\">
-                <ul class=\"nav navbar-nav navbar-right\">
-                    <li><a href=\"#\">My progress</a></li>
-                     <li><a href=\"#\">Settings</a></li>
-                    <li><a href=\"#\">Log Out</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
 <!-- Aquí empieza la actividad Compilador -->
 <div class=\"row\">
@@ -138,7 +115,7 @@ class __TwigTemplate_e486d80c9b2fd71535d4ac4390af91e1419fc7e89bef08bdfafde0296d9
 </div>
 ";
         
-        $__internal_9c0d9b16ed492b6d6fc6963c14a63b635039c8034685689c553586b3c8c35e41->leave($__internal_9c0d9b16ed492b6d6fc6963c14a63b635039c8034685689c553586b3c8c35e41_prof);
+        $__internal_94826711c4a8192e55015bcbe92b3195e315df1926aad0995be937adfaa502d4->leave($__internal_94826711c4a8192e55015bcbe92b3195e315df1926aad0995be937adfaa502d4_prof);
 
     }
 
@@ -154,7 +131,7 @@ class __TwigTemplate_e486d80c9b2fd71535d4ac4390af91e1419fc7e89bef08bdfafde0296d9
 
     public function getDebugInfo()
     {
-        return array (  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -162,27 +139,7 @@ class __TwigTemplate_e486d80c9b2fd71535d4ac4390af91e1419fc7e89bef08bdfafde0296d9
 /* {% block body %}*/
 /* */
 /* <div class="wrapper">*/
-/* <!-- Menú -->*/
 /* */
-/*     <div class="navbar navbar-inverse navbar-fixed-top" >*/
-/*         <div class="container">*/
-/*             <div class="navbar-header">*/
-/*                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">*/
-/*                     <span class="icon-bar"></span>*/
-/*                     <span class="icon-bar"></span>*/
-/*                     <span class="icon-bar"></span>*/
-/*                 </button>*/
-/*                 <div class="logo"><a class="navbar-brand" href="#"><img src="{{ asset('img/logoblanco.png') }}" /></a></div>*/
-/*             </div>*/
-/*             <div class="navbar-collapse collapse">*/
-/*                 <ul class="nav navbar-nav navbar-right">*/
-/*                     <li><a href="#">My progress</a></li>*/
-/*                      <li><a href="#">Settings</a></li>*/
-/*                     <li><a href="#">Log Out</a></li>*/
-/*                 </ul>*/
-/*             </div>*/
-/*         </div>*/
-/*     </div>*/
 /* */
 /* <!-- Aquí empieza la actividad Compilador -->*/
 /* <div class="row">*/

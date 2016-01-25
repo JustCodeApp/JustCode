@@ -22,3 +22,10 @@ verdaderofalso:
     methods:  [GET]
     requirements:
         id:  \d+
+
+principal:
+    path: /principal
+    defaults: { _controller: JustCodeactividadesBundle:Default:principal }
+    methods:  [GET]
+    requirements:
+        id:  \d+

@@ -147,6 +147,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
         not_verdaderofalso:
 
+        // principal
+        if ($pathinfo === '/principal') {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_principal;
+            }
+
+            return array (  '_controller' => 'JustCode\\Bundle\\actividadesBundle\\Controller\\DefaultController::principalAction',  '_route' => 'principal',);
+        }
+        not_principal:
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
