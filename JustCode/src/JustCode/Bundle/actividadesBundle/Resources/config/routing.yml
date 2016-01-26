@@ -1,3 +1,11 @@
+just_codeactividades_preguntas:
+    resource: "@JustCodeactividadesBundle/Resources/config/routing/preguntas.yml"
+    prefix:   /preguntas
+
+just_codeactividades_respuestas:
+    resource: "@JustCodeactividadesBundle/Resources/config/routing/respuestas.yml"
+    prefix:   /respuestas
+
 just_codeactividades_homepage:
     path:     /
     defaults: { _controller: JustCodeactividadesBundle:Default:index }

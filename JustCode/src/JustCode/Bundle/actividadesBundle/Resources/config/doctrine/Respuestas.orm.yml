@@ -1,0 +1,21 @@
+JustCode\Bundle\actividadesBundle\Entity\Respuestas:
+    type: entity
+    table: null
+    repositoryClass: JustCode\Bundle\actividadesBundle\Repository\RespuestasRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        textoRespuesta:
+            type: string
+            length: '512'
+            column: texto_respuesta
+        idPregunta:
+            type: integer
+            column: id_pregunta
+        incorrecta:
+            type: boolean
+    lifecycleCallbacks: {  }

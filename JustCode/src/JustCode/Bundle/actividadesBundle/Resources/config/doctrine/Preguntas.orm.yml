@@ -1,0 +1,26 @@
+JustCode\Bundle\actividadesBundle\Entity\Preguntas:
+    type: entity
+    table: null
+    repositoryClass: JustCode\Bundle\actividadesBundle\Repository\PreguntasRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        enunciado:
+            type: string
+            length: 255
+        dificultad:
+            type: string
+            length: '16'
+        idNivel:
+            type: integer
+            unique: true
+            column: id_nivel
+        idCorrecta:
+            type: integer
+            unique: true
+            column: id_correcta
+    lifecycleCallbacks: {  }

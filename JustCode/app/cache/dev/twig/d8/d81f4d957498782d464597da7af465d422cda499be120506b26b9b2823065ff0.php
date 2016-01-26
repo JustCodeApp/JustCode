@@ -21,20 +21,20 @@ class __TwigTemplate_e11a30ed02c5257d71d2c93bc6989e6648f8c002fce0cacb3e2a97c34be
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_15d08f019b734a644144aada2fc6c0a9094f7e663cb9ebc0ff88c4e473f971f3 = $this->env->getExtension("native_profiler");
-        $__internal_15d08f019b734a644144aada2fc6c0a9094f7e663cb9ebc0ff88c4e473f971f3->enter($__internal_15d08f019b734a644144aada2fc6c0a9094f7e663cb9ebc0ff88c4e473f971f3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "respuestas/show.html.twig"));
+        $__internal_93101dddb9a66a07a28f65b18799400160783b91d6cd42e321f89cebc003d65a = $this->env->getExtension("native_profiler");
+        $__internal_93101dddb9a66a07a28f65b18799400160783b91d6cd42e321f89cebc003d65a->enter($__internal_93101dddb9a66a07a28f65b18799400160783b91d6cd42e321f89cebc003d65a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "respuestas/show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_15d08f019b734a644144aada2fc6c0a9094f7e663cb9ebc0ff88c4e473f971f3->leave($__internal_15d08f019b734a644144aada2fc6c0a9094f7e663cb9ebc0ff88c4e473f971f3_prof);
+        $__internal_93101dddb9a66a07a28f65b18799400160783b91d6cd42e321f89cebc003d65a->leave($__internal_93101dddb9a66a07a28f65b18799400160783b91d6cd42e321f89cebc003d65a_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_956a6055494f8ce445e55f74d4693a568fdb472a0d1c357bef75ee7ed279564d = $this->env->getExtension("native_profiler");
-        $__internal_956a6055494f8ce445e55f74d4693a568fdb472a0d1c357bef75ee7ed279564d->enter($__internal_956a6055494f8ce445e55f74d4693a568fdb472a0d1c357bef75ee7ed279564d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ffa8a5b477a53ce26bd34c043bdfc76168017634931082c3dade800e2f10586b = $this->env->getExtension("native_profiler");
+        $__internal_ffa8a5b477a53ce26bd34c043bdfc76168017634931082c3dade800e2f10586b->enter($__internal_ffa8a5b477a53ce26bd34c043bdfc76168017634931082c3dade800e2f10586b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Respuestas</h1>
@@ -48,37 +48,62 @@ class __TwigTemplate_e11a30ed02c5257d71d2c93bc6989e6648f8c002fce0cacb3e2a97c34be
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["respuesta"]) ? $context["respuesta"] : $this->getContext($context, "respuesta")), "id", array()), "html", null, true);
         echo "</td>
             </tr>
+            <tr>
+                <th>Textorespuesta</th>
+                <td>";
+        // line 14
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["respuesta"]) ? $context["respuesta"] : $this->getContext($context, "respuesta")), "textoRespuesta", array()), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Idpregunta</th>
+                <td>";
+        // line 18
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["respuesta"]) ? $context["respuesta"] : $this->getContext($context, "respuesta")), "idPregunta", array()), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Incorrecta</th>
+                <td>";
+        // line 22
+        if ($this->getAttribute((isset($context["respuesta"]) ? $context["respuesta"] : $this->getContext($context, "respuesta")), "incorrecta", array())) {
+            echo "Yes";
+        } else {
+            echo "No";
+        }
+        echo "</td>
+            </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
             <a href=\"";
-        // line 17
+        // line 29
         echo $this->env->getExtension('routing')->getPath("respuestas_index");
         echo "\">Back to the list</a>
         </li>
         <li>
             <a href=\"";
-        // line 20
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("respuestas_edit", array("id" => $this->getAttribute((isset($context["respuesta"]) ? $context["respuesta"] : $this->getContext($context, "respuesta")), "id", array()))), "html", null, true);
         echo "\">Edit</a>
         </li>
         <li>
             ";
-        // line 23
+        // line 35
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_start');
         echo "
                 <input type=\"submit\" value=\"Delete\">
             ";
-        // line 25
+        // line 37
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_end');
         echo "
         </li>
     </ul>
 ";
         
-        $__internal_956a6055494f8ce445e55f74d4693a568fdb472a0d1c357bef75ee7ed279564d->leave($__internal_956a6055494f8ce445e55f74d4693a568fdb472a0d1c357bef75ee7ed279564d_prof);
+        $__internal_ffa8a5b477a53ce26bd34c043bdfc76168017634931082c3dade800e2f10586b->leave($__internal_ffa8a5b477a53ce26bd34c043bdfc76168017634931082c3dade800e2f10586b_prof);
 
     }
 
@@ -94,7 +119,7 @@ class __TwigTemplate_e11a30ed02c5257d71d2c93bc6989e6648f8c002fce0cacb3e2a97c34be
 
     public function getDebugInfo()
     {
-        return array (  75 => 25,  70 => 23,  64 => 20,  58 => 17,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  100 => 37,  95 => 35,  89 => 32,  83 => 29,  69 => 22,  62 => 18,  55 => 14,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -107,6 +132,18 @@ class __TwigTemplate_e11a30ed02c5257d71d2c93bc6989e6648f8c002fce0cacb3e2a97c34be
 /*             <tr>*/
 /*                 <th>Id</th>*/
 /*                 <td>{{ respuesta.id }}</td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>Textorespuesta</th>*/
+/*                 <td>{{ respuesta.textoRespuesta }}</td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>Idpregunta</th>*/
+/*                 <td>{{ respuesta.idPregunta }}</td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>Incorrecta</th>*/
+/*                 <td>{% if respuesta.incorrecta %}Yes{% else %}No{% endif %}</td>*/
 /*             </tr>*/
 /*         </tbody>*/
 /*     </table>*/
