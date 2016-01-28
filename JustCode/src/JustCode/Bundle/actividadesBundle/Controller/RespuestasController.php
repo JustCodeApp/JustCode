@@ -44,7 +44,7 @@ class RespuestasController extends Controller
             $em->persist($respuesta);
             $em->flush();
 
-            return $this->redirectToRoute('respuestas_show', array('id' => $respuesta->getId()));
+            return $this->redirectToRoute('respuestas_show', array('id' => $respuesta->getIdrespuestas()));
         }
 
         return $this->render('respuestas/new.html.twig', array(
@@ -82,7 +82,7 @@ class RespuestasController extends Controller
             $em->persist($respuesta);
             $em->flush();
 
-            return $this->redirectToRoute('respuestas_edit', array('id' => $respuesta->getId()));
+            return $this->redirectToRoute('respuestas_edit', array('id' => $respuesta->getIdrespuestas()));
         }
 
         return $this->render('respuestas/edit.html.twig', array(
@@ -120,7 +120,7 @@ class RespuestasController extends Controller
     private function createDeleteForm(Respuestas $respuesta)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('respuestas_delete', array('id' => $respuesta->getId())))
+            ->setAction($this->generateUrl('respuestas_delete', array('id' => $respuesta->getIdrespuestas())))
             ->setMethod('DELETE')
             ->getForm()
         ;

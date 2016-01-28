@@ -1,21 +1,51 @@
 JustCode\Bundle\actividadesBundle\Entity\Respuestas:
     type: entity
-    table: null
-    repositoryClass: JustCode\Bundle\actividadesBundle\Repository\RespuestasRepository
+    table: Respuestas
+    indexes:
+        fk_Respuestas_Preguntas_idx:
+            columns:
+                - Preguntas_idPreguntas
+        fk_Respuestas_Niveles1_idx:
+            columns:
+                - Niveles_idNiveles
     id:
-        id:
+        idrespuestas:
             type: integer
+            nullable: false
+            options:
+                unsigned: false
             id: true
-            generator:
-                strategy: AUTO
+            column: idRespuestas
     fields:
         textoRespuesta:
             type: string
-            length: '512'
+            nullable: true
+            length: 512
+            options:
+                fixed: false
             column: texto_respuesta
-        idPregunta:
-            type: integer
-            column: id_pregunta
-        incorrecta:
+        correcta:
             type: boolean
+            nullable: true
+    oneToOne:
+        preguntaspreguntas:
+            targetEntity: Preguntas
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Preguntas_idPreguntas:
+                    referencedColumnName: idPreguntas
+            orphanRemoval: false
+        nivelesniveles:
+            targetEntity: Niveles
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Niveles_idNiveles:
+                    referencedColumnName: idNiveles
+            orphanRemoval: false
     lifecycleCallbacks: {  }

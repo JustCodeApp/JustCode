@@ -21,20 +21,20 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296 = $this->env->getExtension("native_profiler");
-        $__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296->enter($__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:index.html.twig"));
+        $__internal_80fc921cdc6bb9d7755b7f0c0212ce843a2d5041e3d56a2fe61091e2399e5839 = $this->env->getExtension("native_profiler");
+        $__internal_80fc921cdc6bb9d7755b7f0c0212ce843a2d5041e3d56a2fe61091e2399e5839->enter($__internal_80fc921cdc6bb9d7755b7f0c0212ce843a2d5041e3d56a2fe61091e2399e5839_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296->leave($__internal_35a840ef7236cfdd44d51e6f7879b4d28f8871e21618b85901dd0dd88f83b296_prof);
+        $__internal_80fc921cdc6bb9d7755b7f0c0212ce843a2d5041e3d56a2fe61091e2399e5839->leave($__internal_80fc921cdc6bb9d7755b7f0c0212ce843a2d5041e3d56a2fe61091e2399e5839_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6 = $this->env->getExtension("native_profiler");
-        $__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6->enter($__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8c51bfb2fef53f4e6f13e686aaa705840ce5a7a7ffa202ffd750fbf1e22495e2 = $this->env->getExtension("native_profiler");
+        $__internal_8c51bfb2fef53f4e6f13e686aaa705840ce5a7a7ffa202ffd750fbf1e22495e2->enter($__internal_8c51bfb2fef53f4e6f13e686aaa705840ce5a7a7ffa202ffd750fbf1e22495e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Esto es el índice.</h1>
@@ -66,11 +66,52 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
         // line 23
         echo "\">Verdadero y falso</a>
         </li>
-
+        
+        ";
+        // line 26
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["niveles"]) ? $context["niveles"] : $this->getContext($context, "niveles")));
+        foreach ($context['_seq'] as $context["_key"] => $context["nivele"]) {
+            // line 27
+            echo "            <tr>
+                <td><a href=\"";
+            // line 28
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("niveles_show", array("id" => $this->getAttribute($context["nivele"], "idniveles", array()))), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["nivele"], "idniveles", array()), "html", null, true);
+            echo "</a></td>
+                <td>";
+            // line 29
+            echo twig_escape_filter($this->env, $this->getAttribute($context["nivele"], "textoNivel", array()), "html", null, true);
+            echo "</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href=\"";
+            // line 33
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("niveles_show", array("id" => $this->getAttribute($context["nivele"], "idniveles", array()))), "html", null, true);
+            echo "\">show</a>
+                        </li>
+                        <li>
+                            <a href=\"";
+            // line 36
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("niveles_edit", array("id" => $this->getAttribute($context["nivele"], "idniveles", array()))), "html", null, true);
+            echo "\">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['nivele'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 42
+        echo "
         </ul>
 ";
         
-        $__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6->leave($__internal_d6149551ea8cd026f646f96b44d05be7b81b79ddcbe159c6be01788745b78da6_prof);
+        $__internal_8c51bfb2fef53f4e6f13e686aaa705840ce5a7a7ffa202ffd750fbf1e22495e2->leave($__internal_8c51bfb2fef53f4e6f13e686aaa705840ce5a7a7ffa202ffd750fbf1e22495e2_prof);
 
     }
 
@@ -86,7 +127,7 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
 
     public function getDebugInfo()
     {
-        return array (  67 => 23,  65 => 21,  60 => 18,  58 => 16,  53 => 13,  51 => 11,  46 => 8,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  110 => 42,  98 => 36,  92 => 33,  85 => 29,  79 => 28,  76 => 27,  72 => 26,  67 => 23,  65 => 21,  60 => 18,  58 => 16,  53 => 13,  51 => 11,  46 => 8,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -113,6 +154,23 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
 /*         url('verdaderofalso') */
 /*         }}">Verdadero y falso</a>*/
 /*         </li>*/
+/*         */
+/*         {% for nivele in niveles %}*/
+/*             <tr>*/
+/*                 <td><a href="{{ path('niveles_show', { 'id': nivele.idniveles }) }}">{{ nivele.idniveles }}</a></td>*/
+/*                 <td>{{ nivele.textoNivel }}</td>*/
+/*                 <td>*/
+/*                     <ul>*/
+/*                         <li>*/
+/*                             <a href="{{ path('niveles_show', { 'id': nivele.idniveles }) }}">show</a>*/
+/*                         </li>*/
+/*                         <li>*/
+/*                             <a href="{{ path('niveles_edit', { 'id': nivele.idniveles }) }}">edit</a>*/
+/*                         </li>*/
+/*                     </ul>*/
+/*                 </td>*/
+/*             </tr>*/
+/*         {% endfor %}*/
 /* */
 /*         </ul>*/
 /* {% endblock %}*/

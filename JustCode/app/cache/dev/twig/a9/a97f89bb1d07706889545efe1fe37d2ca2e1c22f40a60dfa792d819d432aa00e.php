@@ -21,77 +21,62 @@ class __TwigTemplate_4dcefe03a07e50c4b7f536aa257cb802153464f89e5a2a0e77410d8fbbe
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_67c1ca690b8cf394464310bf2c7457759a5f6a84dd7241913744ef811ffe9efd = $this->env->getExtension("native_profiler");
-        $__internal_67c1ca690b8cf394464310bf2c7457759a5f6a84dd7241913744ef811ffe9efd->enter($__internal_67c1ca690b8cf394464310bf2c7457759a5f6a84dd7241913744ef811ffe9efd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "preguntas/index.html.twig"));
+        $__internal_f71a1404008136465f53f7544e0c957052d55d855961a2b23ba3b2f2a0db55df = $this->env->getExtension("native_profiler");
+        $__internal_f71a1404008136465f53f7544e0c957052d55d855961a2b23ba3b2f2a0db55df->enter($__internal_f71a1404008136465f53f7544e0c957052d55d855961a2b23ba3b2f2a0db55df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "preguntas/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_67c1ca690b8cf394464310bf2c7457759a5f6a84dd7241913744ef811ffe9efd->leave($__internal_67c1ca690b8cf394464310bf2c7457759a5f6a84dd7241913744ef811ffe9efd_prof);
+        $__internal_f71a1404008136465f53f7544e0c957052d55d855961a2b23ba3b2f2a0db55df->leave($__internal_f71a1404008136465f53f7544e0c957052d55d855961a2b23ba3b2f2a0db55df_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_62fbcad7f9438a7379acaf3d7638834f4b604d1f52de742572e5ac4e6c7e1c5f = $this->env->getExtension("native_profiler");
-        $__internal_62fbcad7f9438a7379acaf3d7638834f4b604d1f52de742572e5ac4e6c7e1c5f->enter($__internal_62fbcad7f9438a7379acaf3d7638834f4b604d1f52de742572e5ac4e6c7e1c5f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a8df4e351c3551560f34959b2d804e3fe0a0cc449a1c04be77605849360b350c = $this->env->getExtension("native_profiler");
+        $__internal_a8df4e351c3551560f34959b2d804e3fe0a0cc449a1c04be77605849360b350c->enter($__internal_a8df4e351c3551560f34959b2d804e3fe0a0cc449a1c04be77605849360b350c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Preguntas list</h1>
 
-    <table border=\"1\">
+    <table>
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Idpreguntas</th>
                 <th>Enunciado</th>
-                <th>Dificultad</th>
-                <th>Idnivel</th>
-                <th>Idcorrecta</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 18
+        // line 15
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["preguntas"]) ? $context["preguntas"] : $this->getContext($context, "preguntas")));
         foreach ($context['_seq'] as $context["_key"] => $context["pregunta"]) {
-            // line 19
+            // line 16
             echo "            <tr>
                 <td><a href=\"";
-            // line 20
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("preguntas_show", array("id" => $this->getAttribute($context["pregunta"], "id", array()))), "html", null, true);
+            // line 17
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("preguntas_show", array("id" => $this->getAttribute($context["pregunta"], "idpreguntas", array()))), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["pregunta"], "id", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["pregunta"], "idpreguntas", array()), "html", null, true);
             echo "</a></td>
                 <td>";
-            // line 21
+            // line 18
             echo twig_escape_filter($this->env, $this->getAttribute($context["pregunta"], "enunciado", array()), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 22
-            echo twig_escape_filter($this->env, $this->getAttribute($context["pregunta"], "dificultad", array()), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 23
-            echo twig_escape_filter($this->env, $this->getAttribute($context["pregunta"], "idNivel", array()), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 24
-            echo twig_escape_filter($this->env, $this->getAttribute($context["pregunta"], "idCorrecta", array()), "html", null, true);
             echo "</td>
                 <td>
                     <ul>
                         <li>
                             <a href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("preguntas_show", array("id" => $this->getAttribute($context["pregunta"], "id", array()))), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("preguntas_show", array("id" => $this->getAttribute($context["pregunta"], "idpreguntas", array()))), "html", null, true);
             echo "\">show</a>
                         </li>
                         <li>
                             <a href=\"";
-            // line 31
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("preguntas_edit", array("id" => $this->getAttribute($context["pregunta"], "id", array()))), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("preguntas_edit", array("id" => $this->getAttribute($context["pregunta"], "idpreguntas", array()))), "html", null, true);
             echo "\">edit</a>
                         </li>
                     </ul>
@@ -102,21 +87,21 @@ class __TwigTemplate_4dcefe03a07e50c4b7f536aa257cb802153464f89e5a2a0e77410d8fbbe
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pregunta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 31
         echo "        </tbody>
     </table>
 
     <ul>
         <li>
             <a href=\"";
-        // line 42
+        // line 36
         echo $this->env->getExtension('routing')->getPath("preguntas_new");
         echo "\">Create a new entry</a>
         </li>
     </ul>
 ";
         
-        $__internal_62fbcad7f9438a7379acaf3d7638834f4b604d1f52de742572e5ac4e6c7e1c5f->leave($__internal_62fbcad7f9438a7379acaf3d7638834f4b604d1f52de742572e5ac4e6c7e1c5f_prof);
+        $__internal_a8df4e351c3551560f34959b2d804e3fe0a0cc449a1c04be77605849360b350c->leave($__internal_a8df4e351c3551560f34959b2d804e3fe0a0cc449a1c04be77605849360b350c_prof);
 
     }
 
@@ -132,7 +117,7 @@ class __TwigTemplate_4dcefe03a07e50c4b7f536aa257cb802153464f89e5a2a0e77410d8fbbe
 
     public function getDebugInfo()
     {
-        return array (  113 => 42,  106 => 37,  94 => 31,  88 => 28,  81 => 24,  77 => 23,  73 => 22,  69 => 21,  63 => 20,  60 => 19,  56 => 18,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  98 => 36,  91 => 31,  79 => 25,  73 => 22,  66 => 18,  60 => 17,  57 => 16,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -140,32 +125,26 @@ class __TwigTemplate_4dcefe03a07e50c4b7f536aa257cb802153464f89e5a2a0e77410d8fbbe
 /* {% block body %}*/
 /*     <h1>Preguntas list</h1>*/
 /* */
-/*     <table border="1">*/
+/*     <table>*/
 /*         <thead>*/
 /*             <tr>*/
-/*                 <th>Id</th>*/
+/*                 <th>Idpreguntas</th>*/
 /*                 <th>Enunciado</th>*/
-/*                 <th>Dificultad</th>*/
-/*                 <th>Idnivel</th>*/
-/*                 <th>Idcorrecta</th>*/
 /*                 <th>Actions</th>*/
 /*             </tr>*/
 /*         </thead>*/
 /*         <tbody>*/
 /*         {% for pregunta in preguntas %}*/
 /*             <tr>*/
-/*                 <td><a href="{{ path('preguntas_show', { 'id': pregunta.id }) }}">{{ pregunta.id }}</a></td>*/
+/*                 <td><a href="{{ path('preguntas_show', { 'id': pregunta.idpreguntas }) }}">{{ pregunta.idpreguntas }}</a></td>*/
 /*                 <td>{{ pregunta.enunciado }}</td>*/
-/*                 <td>{{ pregunta.dificultad }}</td>*/
-/*                 <td>{{ pregunta.idNivel }}</td>*/
-/*                 <td>{{ pregunta.idCorrecta }}</td>*/
 /*                 <td>*/
 /*                     <ul>*/
 /*                         <li>*/
-/*                             <a href="{{ path('preguntas_show', { 'id': pregunta.id }) }}">show</a>*/
+/*                             <a href="{{ path('preguntas_show', { 'id': pregunta.idpreguntas }) }}">show</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="{{ path('preguntas_edit', { 'id': pregunta.id }) }}">edit</a>*/
+/*                             <a href="{{ path('preguntas_edit', { 'id': pregunta.idpreguntas }) }}">edit</a>*/
 /*                         </li>*/
 /*                     </ul>*/
 /*                 </td>*/

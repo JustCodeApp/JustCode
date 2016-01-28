@@ -7,10 +7,13 @@ namespace JustCode\Bundle\actividadesBundle\Entity;
  */
 class Respuestas
 {
+    public function __toString(){
+        return strval($this->idrespuestas);
+    }
     /**
-     * @var int
+     * @var integer
      */
-    private $id;
+    private $idrespuestas;
 
     /**
      * @var string
@@ -18,24 +21,43 @@ class Respuestas
     private $textoRespuesta;
 
     /**
-     * @var int
+     * @var boolean
      */
-    private $idPregunta;
+    private $correcta;
 
     /**
-     * @var bool
+     * @var \JustCode\Bundle\actividadesBundle\Entity\Preguntas
      */
-    private $incorrecta;
+    private $preguntaspreguntas;
+
+    /**
+     * @var \JustCode\Bundle\actividadesBundle\Entity\Niveles
+     */
+    private $nivelesniveles;
 
 
     /**
-     * Get id
+     * Set idrespuestas
      *
-     * @return int
+     * @param integer $idrespuestas
+     *
+     * @return Respuestas
      */
-    public function getId()
+    public function setIdrespuestas($idrespuestas)
     {
-        return $this->id;
+        $this->idrespuestas = $idrespuestas;
+
+        return $this;
+    }
+
+    /**
+     * Get idrespuestas
+     *
+     * @return integer
+     */
+    public function getIdrespuestas()
+    {
+        return $this->idrespuestas;
     }
 
     /**
@@ -63,50 +85,75 @@ class Respuestas
     }
 
     /**
-     * Set idPregunta
+     * Set correcta
      *
-     * @param integer $idPregunta
+     * @param boolean $correcta
      *
      * @return Respuestas
      */
-    public function setIdPregunta($idPregunta)
+    public function setCorrecta($correcta)
     {
-        $this->idPregunta = $idPregunta;
+        $this->correcta = $correcta;
 
         return $this;
     }
 
     /**
-     * Get idPregunta
+     * Get correcta
      *
-     * @return int
+     * @return boolean
      */
-    public function getIdPregunta()
+    public function getCorrecta()
     {
-        return $this->idPregunta;
+        return $this->correcta;
     }
 
     /**
-     * Set incorrecta
+     * Set preguntaspreguntas
      *
-     * @param boolean $incorrecta
+     * @param \JustCode\Bundle\actividadesBundle\Entity\Preguntas $preguntaspreguntas
      *
      * @return Respuestas
      */
-    public function setIncorrecta($incorrecta)
+    public function setPreguntaspreguntas(\JustCode\Bundle\actividadesBundle\Entity\Preguntas $preguntaspreguntas = null)
     {
-        $this->incorrecta = $incorrecta;
+        $this->preguntaspreguntas = $preguntaspreguntas;
 
         return $this;
     }
 
     /**
-     * Get incorrecta
+     * Get preguntaspreguntas
      *
-     * @return bool
+     * @return \JustCode\Bundle\actividadesBundle\Entity\Preguntas
      */
-    public function getIncorrecta()
+    public function getPreguntaspreguntas()
     {
-        return $this->incorrecta;
+        return $this->preguntaspreguntas;
+    }
+
+    /**
+     * Set nivelesniveles
+     *
+     * @param \JustCode\Bundle\actividadesBundle\Entity\Niveles $nivelesniveles
+     *
+     * @return Respuestas
+     */
+    public function setNivelesniveles(\JustCode\Bundle\actividadesBundle\Entity\Niveles $nivelesniveles = null)
+    {
+        $this->nivelesniveles = $nivelesniveles;
+
+        return $this;
+    }
+
+    /**
+     * Get nivelesniveles
+     *
+     * @return \JustCode\Bundle\actividadesBundle\Entity\Niveles
+     */
+    public function getNivelesniveles()
+    {
+        return $this->nivelesniveles;
     }
 }
+

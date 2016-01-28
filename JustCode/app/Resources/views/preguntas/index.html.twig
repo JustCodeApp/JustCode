@@ -3,32 +3,26 @@
 {% block body %}
     <h1>Preguntas list</h1>
 
-    <table border="1">
+    <table>
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Idpreguntas</th>
                 <th>Enunciado</th>
-                <th>Dificultad</th>
-                <th>Idnivel</th>
-                <th>Idcorrecta</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for pregunta in preguntas %}
             <tr>
-                <td><a href="{{ path('preguntas_show', { 'id': pregunta.id }) }}">{{ pregunta.id }}</a></td>
+                <td><a href="{{ path('preguntas_show', { 'id': pregunta.idpreguntas }) }}">{{ pregunta.idpreguntas }}</a></td>
                 <td>{{ pregunta.enunciado }}</td>
-                <td>{{ pregunta.dificultad }}</td>
-                <td>{{ pregunta.idNivel }}</td>
-                <td>{{ pregunta.idCorrecta }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('preguntas_show', { 'id': pregunta.id }) }}">show</a>
+                            <a href="{{ path('preguntas_show', { 'id': pregunta.idpreguntas }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('preguntas_edit', { 'id': pregunta.id }) }}">edit</a>
+                            <a href="{{ path('preguntas_edit', { 'id': pregunta.idpreguntas }) }}">edit</a>
                         </li>
                     </ul>
                 </td>

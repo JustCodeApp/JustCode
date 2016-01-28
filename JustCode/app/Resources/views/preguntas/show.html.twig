@@ -6,24 +6,12 @@
     <table>
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ pregunta.id }}</td>
+                <th>Idpreguntas</th>
+                <td>{{ pregunta.idpreguntas }}</td>
             </tr>
             <tr>
                 <th>Enunciado</th>
                 <td>{{ pregunta.enunciado }}</td>
-            </tr>
-            <tr>
-                <th>Dificultad</th>
-                <td>{{ pregunta.dificultad }}</td>
-            </tr>
-            <tr>
-                <th>Idnivel</th>
-                <td>{{ pregunta.idNivel }}</td>
-            </tr>
-            <tr>
-                <th>Idcorrecta</th>
-                <td>{{ pregunta.idCorrecta }}</td>
             </tr>
         </tbody>
     </table>
@@ -33,7 +21,7 @@
             <a href="{{ path('preguntas_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('preguntas_edit', { 'id': pregunta.id }) }}">Edit</a>
+            <a href="{{ path('preguntas_edit', { 'id': pregunta.idpreguntas }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

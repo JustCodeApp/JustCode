@@ -64,10 +64,10 @@ class Preguntas extends \JustCode\Bundle\actividadesBundle\Entity\Preguntas impl
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'id', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'enunciado', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'dificultad', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'idNivel', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'idCorrecta'];
+            return ['__isInitialized__', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'idpreguntas', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'enunciado', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'nivelesniveles'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'id', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'enunciado', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'dificultad', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'idNivel', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'idCorrecta'];
+        return ['__isInitialized__', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'idpreguntas', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'enunciado', '' . "\0" . 'JustCode\\Bundle\\actividadesBundle\\Entity\\Preguntas' . "\0" . 'nivelesniveles'];
     }
 
     /**
@@ -176,16 +176,38 @@ class Preguntas extends \JustCode\Bundle\actividadesBundle\Entity\Preguntas impl
     /**
      * {@inheritDoc}
      */
-    public function getId()
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+
+        return parent::__toString();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setIdpreguntas($idpreguntas)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdpreguntas', [$idpreguntas]);
+
+        return parent::setIdpreguntas($idpreguntas);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getIdpreguntas()
     {
         if ($this->__isInitialized__ === false) {
-            return (int)  parent::getId();
+            return (int)  parent::getIdpreguntas();
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdpreguntas', []);
 
-        return parent::getId();
+        return parent::getIdpreguntas();
     }
 
     /**
@@ -213,67 +235,23 @@ class Preguntas extends \JustCode\Bundle\actividadesBundle\Entity\Preguntas impl
     /**
      * {@inheritDoc}
      */
-    public function setDificultad($dificultad)
+    public function setNivelesniveles(\JustCode\Bundle\actividadesBundle\Entity\Niveles $nivelesniveles = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDificultad', [$dificultad]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNivelesniveles', [$nivelesniveles]);
 
-        return parent::setDificultad($dificultad);
+        return parent::setNivelesniveles($nivelesniveles);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getDificultad()
+    public function getNivelesniveles()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDificultad', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNivelesniveles', []);
 
-        return parent::getDificultad();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setIdNivel($idNivel)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdNivel', [$idNivel]);
-
-        return parent::setIdNivel($idNivel);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getIdNivel()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdNivel', []);
-
-        return parent::getIdNivel();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setIdCorrecta($idCorrecta)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdCorrecta', [$idCorrecta]);
-
-        return parent::setIdCorrecta($idCorrecta);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getIdCorrecta()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdCorrecta', []);
-
-        return parent::getIdCorrecta();
+        return parent::getNivelesniveles();
     }
 
 }

@@ -5,6 +5,10 @@ just_codeactividades_preguntas:
 just_codeactividades_respuestas:
     resource: "@JustCodeactividadesBundle/Resources/config/routing/respuestas.yml"
     prefix:   /respuestas
+    
+just_codeactividades_niveles:
+    resource: "@JustCodeactividadesBundle/Resources/config/routing/niveles.yml"
+    prefix:   /niveles
 
 just_codeactividades_homepage:
     path:     /

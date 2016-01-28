@@ -7,10 +7,13 @@ namespace JustCode\Bundle\actividadesBundle\Entity;
  */
 class Preguntas
 {
+    public function __toString(){
+        return strval($this->idpreguntas);
+    }
     /**
-     * @var int
+     * @var integer
      */
-    private $id;
+    private $idpreguntas;
 
     /**
      * @var string
@@ -18,29 +21,33 @@ class Preguntas
     private $enunciado;
 
     /**
-     * @var string
+     * @var \JustCode\Bundle\actividadesBundle\Entity\Niveles
      */
-    private $dificultad;
-
-    /**
-     * @var int
-     */
-    private $idNivel;
-
-    /**
-     * @var int
-     */
-    private $idCorrecta;
+    private $nivelesniveles;
 
 
     /**
-     * Get id
+     * Set idpreguntas
      *
-     * @return int
+     * @param integer $idpreguntas
+     *
+     * @return Preguntas
      */
-    public function getId()
+    public function setIdpreguntas($idpreguntas)
     {
-        return $this->id;
+        $this->idpreguntas = $idpreguntas;
+
+        return $this;
+    }
+
+    /**
+     * Get idpreguntas
+     *
+     * @return integer
+     */
+    public function getIdpreguntas()
+    {
+        return $this->idpreguntas;
     }
 
     /**
@@ -68,74 +75,26 @@ class Preguntas
     }
 
     /**
-     * Set dificultad
+     * Set nivelesniveles
      *
-     * @param string $dificultad
+     * @param \JustCode\Bundle\actividadesBundle\Entity\Niveles $nivelesniveles
      *
      * @return Preguntas
      */
-    public function setDificultad($dificultad)
+    public function setNivelesniveles(\JustCode\Bundle\actividadesBundle\Entity\Niveles $nivelesniveles = null)
     {
-        $this->dificultad = $dificultad;
+        $this->nivelesniveles = $nivelesniveles;
 
         return $this;
     }
 
     /**
-     * Get dificultad
+     * Get nivelesniveles
      *
-     * @return string
+     * @return \JustCode\Bundle\actividadesBundle\Entity\Niveles
      */
-    public function getDificultad()
+    public function getNivelesniveles()
     {
-        return $this->dificultad;
-    }
-
-    /**
-     * Set idNivel
-     *
-     * @param integer $idNivel
-     *
-     * @return Preguntas
-     */
-    public function setIdNivel($idNivel)
-    {
-        $this->idNivel = $idNivel;
-
-        return $this;
-    }
-
-    /**
-     * Get idNivel
-     *
-     * @return int
-     */
-    public function getIdNivel()
-    {
-        return $this->idNivel;
-    }
-
-    /**
-     * Set idCorrecta
-     *
-     * @param integer $idCorrecta
-     *
-     * @return Preguntas
-     */
-    public function setIdCorrecta($idCorrecta)
-    {
-        $this->idCorrecta = $idCorrecta;
-
-        return $this;
-    }
-
-    /**
-     * Get idCorrecta
-     *
-     * @return int
-     */
-    public function getIdCorrecta()
-    {
-        return $this->idCorrecta;
+        return $this->nivelesniveles;
     }
 }

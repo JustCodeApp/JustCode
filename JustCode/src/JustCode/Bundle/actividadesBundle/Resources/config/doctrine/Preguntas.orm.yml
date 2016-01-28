@@ -1,26 +1,34 @@
 JustCode\Bundle\actividadesBundle\Entity\Preguntas:
     type: entity
-    table: null
-    repositoryClass: JustCode\Bundle\actividadesBundle\Repository\PreguntasRepository
+    table: Preguntas
+    indexes:
+        fk_Preguntas_Niveles1_idx:
+            columns:
+                - Niveles_idNiveles
     id:
-        id:
+        idpreguntas:
             type: integer
+            nullable: false
+            options:
+                unsigned: false
             id: true
-            generator:
-                strategy: AUTO
+            column: idPreguntas
     fields:
         enunciado:
             type: string
-            length: 255
-        dificultad:
-            type: string
-            length: '16'
-        idNivel:
-            type: integer
-            unique: true
-            column: id_nivel
-        idCorrecta:
-            type: integer
-            unique: true
-            column: id_correcta
+            nullable: true
+            length: 512
+            options:
+                fixed: false
+    oneToOne:
+        nivelesniveles:
+            targetEntity: Niveles
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Niveles_idNiveles:
+                    referencedColumnName: idNiveles
+            orphanRemoval: false
     lifecycleCallbacks: {  }

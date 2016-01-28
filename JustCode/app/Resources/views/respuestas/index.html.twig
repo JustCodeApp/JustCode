@@ -3,30 +3,28 @@
 {% block body %}
     <h1>Respuestas list</h1>
 
-    <table border="1">
+    <table>
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Idrespuestas</th>
                 <th>Textorespuesta</th>
-                <th>Idpregunta</th>
-                <th>Incorrecta</th>
+                <th>Correcta</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for respuesta in respuestas %}
             <tr>
-                <td><a href="{{ path('respuestas_show', { 'id': respuesta.id }) }}">{{ respuesta.id }}</a></td>
+                <td><a href="{{ path('respuestas_show', { 'id': respuesta.idrespuestas }) }}">{{ respuesta.idrespuestas }}</a></td>
                 <td>{{ respuesta.textoRespuesta }}</td>
-                <td>{{ respuesta.idPregunta }}</td>
-                <td>{% if respuesta.incorrecta %}Yes{% else %}No{% endif %}</td>
+                <td>{% if respuesta.correcta %}Yes{% else %}No{% endif %}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('respuestas_show', { 'id': respuesta.id }) }}">show</a>
+                            <a href="{{ path('respuestas_show', { 'id': respuesta.idrespuestas }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('respuestas_edit', { 'id': respuesta.id }) }}">edit</a>
+                            <a href="{{ path('respuestas_edit', { 'id': respuesta.idrespuestas }) }}">edit</a>
                         </li>
                     </ul>
                 </td>

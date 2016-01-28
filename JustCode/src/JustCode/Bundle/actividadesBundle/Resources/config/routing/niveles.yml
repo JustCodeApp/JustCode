@@ -1,0 +1,24 @@
+niveles_index:
+    path:     /
+    defaults: { _controller: "JustCodeactividadesBundle:Niveles:index" }
+    methods:  GET
+
+niveles_show:
+    path:     /{id}/show
+    defaults: { _controller: "JustCodeactividadesBundle:Niveles:show" }
+    methods:  GET
+
+niveles_new:
+    path:     /new
+    defaults: { _controller: "JustCodeactividadesBundle:Niveles:new" }
+    methods:  [GET, POST]
+
+niveles_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "JustCodeactividadesBundle:Niveles:edit" }
+    methods:  [GET, POST]
+
+niveles_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "JustCodeactividadesBundle:Niveles:delete" }
+    methods:  DELETE

@@ -229,6 +229,68 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/niveles')) {
+            // niveles_index
+            if (rtrim($pathinfo, '/') === '/niveles') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_niveles_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'niveles_index');
+                }
+
+                return array (  '_controller' => 'JustCode\\Bundle\\actividadesBundle\\Controller\\NivelesController::indexAction',  '_route' => 'niveles_index',);
+            }
+            not_niveles_index:
+
+            // niveles_show
+            if (preg_match('#^/niveles/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_niveles_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'niveles_show')), array (  '_controller' => 'JustCode\\Bundle\\actividadesBundle\\Controller\\NivelesController::showAction',));
+            }
+            not_niveles_show:
+
+            // niveles_new
+            if ($pathinfo === '/niveles/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_niveles_new;
+                }
+
+                return array (  '_controller' => 'JustCode\\Bundle\\actividadesBundle\\Controller\\NivelesController::newAction',  '_route' => 'niveles_new',);
+            }
+            not_niveles_new:
+
+            // niveles_edit
+            if (preg_match('#^/niveles/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_niveles_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'niveles_edit')), array (  '_controller' => 'JustCode\\Bundle\\actividadesBundle\\Controller\\NivelesController::editAction',));
+            }
+            not_niveles_edit:
+
+            // niveles_delete
+            if (preg_match('#^/niveles/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_niveles_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'niveles_delete')), array (  '_controller' => 'JustCode\\Bundle\\actividadesBundle\\Controller\\NivelesController::deleteAction',));
+            }
+            not_niveles_delete:
+
+        }
+
         // just_codeactividades_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

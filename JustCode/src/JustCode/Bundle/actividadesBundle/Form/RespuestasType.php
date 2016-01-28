@@ -15,9 +15,11 @@ class RespuestasType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('idrespuestas')
             ->add('textoRespuesta')
-            ->add('idPregunta')
-            ->add('incorrecta')
+            ->add('correcta')
+            ->add('preguntaspreguntas')
+            ->add('nivelesniveles')
         ;
     }
     

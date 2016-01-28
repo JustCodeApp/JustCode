@@ -15,10 +15,9 @@ class PreguntasType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('idpreguntas')
             ->add('enunciado')
-            ->add('dificultad')
-            ->add('idNivel')
-            ->add('idCorrecta')
+            ->add('nivelesniveles')
         ;
     }
     

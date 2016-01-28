@@ -44,7 +44,7 @@ class PreguntasController extends Controller
             $em->persist($pregunta);
             $em->flush();
 
-            return $this->redirectToRoute('preguntas_show', array('id' => $pregunta->getId()));
+            return $this->redirectToRoute('preguntas_show', array('id' => $pregunta->getIdpreguntas()));
         }
 
         return $this->render('preguntas/new.html.twig', array(
@@ -82,7 +82,7 @@ class PreguntasController extends Controller
             $em->persist($pregunta);
             $em->flush();
 
-            return $this->redirectToRoute('preguntas_edit', array('id' => $pregunta->getId()));
+            return $this->redirectToRoute('preguntas_edit', array('id' => $pregunta->getIdpreguntas()));
         }
 
         return $this->render('preguntas/edit.html.twig', array(
@@ -120,7 +120,7 @@ class PreguntasController extends Controller
     private function createDeleteForm(Preguntas $pregunta)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('preguntas_delete', array('id' => $pregunta->getId())))
+            ->setAction($this->generateUrl('preguntas_delete', array('id' => $pregunta->getIdpreguntas())))
             ->setMethod('DELETE')
             ->getForm()
         ;

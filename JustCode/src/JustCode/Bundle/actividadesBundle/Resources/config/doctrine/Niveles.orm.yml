@@ -1,0 +1,22 @@
+JustCode\Bundle\actividadesBundle\Entity\Niveles:
+    type: entity
+    table: Niveles
+    id:
+        idniveles:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: idNiveles
+            generator:
+                strategy: IDENTITY
+    fields:
+        textoNivel:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+            column: texto_nivel
+    lifecycleCallbacks: {  }

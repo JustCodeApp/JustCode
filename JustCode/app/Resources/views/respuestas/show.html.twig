@@ -6,20 +6,16 @@
     <table>
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ respuesta.id }}</td>
+                <th>Idrespuestas</th>
+                <td>{{ respuesta.idrespuestas }}</td>
             </tr>
             <tr>
                 <th>Textorespuesta</th>
                 <td>{{ respuesta.textoRespuesta }}</td>
             </tr>
             <tr>
-                <th>Idpregunta</th>
-                <td>{{ respuesta.idPregunta }}</td>
-            </tr>
-            <tr>
-                <th>Incorrecta</th>
-                <td>{% if respuesta.incorrecta %}Yes{% else %}No{% endif %}</td>
+                <th>Correcta</th>
+                <td>{% if respuesta.correcta %}Yes{% else %}No{% endif %}</td>
             </tr>
         </tbody>
     </table>
@@ -29,7 +25,7 @@
             <a href="{{ path('respuestas_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('respuestas_edit', { 'id': respuesta.id }) }}">Edit</a>
+            <a href="{{ path('respuestas_edit', { 'id': respuesta.idrespuestas }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
