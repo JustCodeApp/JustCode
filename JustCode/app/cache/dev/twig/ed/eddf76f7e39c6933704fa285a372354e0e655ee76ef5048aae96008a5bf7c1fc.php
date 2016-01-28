@@ -21,49 +21,24 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c6e107f72524cff5517337daf3f3e875da1a4f4a3690fdd3656d9f7fd242d3b4 = $this->env->getExtension("native_profiler");
-        $__internal_c6e107f72524cff5517337daf3f3e875da1a4f4a3690fdd3656d9f7fd242d3b4->enter($__internal_c6e107f72524cff5517337daf3f3e875da1a4f4a3690fdd3656d9f7fd242d3b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:testType.html.twig"));
+        $__internal_47e1d1a4a14096de621a4db3627f0e892b550344ff43c779433564936d98919e = $this->env->getExtension("native_profiler");
+        $__internal_47e1d1a4a14096de621a4db3627f0e892b550344ff43c779433564936d98919e->enter($__internal_47e1d1a4a14096de621a4db3627f0e892b550344ff43c779433564936d98919e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:testType.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c6e107f72524cff5517337daf3f3e875da1a4f4a3690fdd3656d9f7fd242d3b4->leave($__internal_c6e107f72524cff5517337daf3f3e875da1a4f4a3690fdd3656d9f7fd242d3b4_prof);
+        $__internal_47e1d1a4a14096de621a4db3627f0e892b550344ff43c779433564936d98919e->leave($__internal_47e1d1a4a14096de621a4db3627f0e892b550344ff43c779433564936d98919e_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f0db099932f1165b84ef7d2740593376a4cc6bfa19eed3fc50d008ec04ee26fc = $this->env->getExtension("native_profiler");
-        $__internal_f0db099932f1165b84ef7d2740593376a4cc6bfa19eed3fc50d008ec04ee26fc->enter($__internal_f0db099932f1165b84ef7d2740593376a4cc6bfa19eed3fc50d008ec04ee26fc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c699c992a1fb8b50feb3b2c8744b25f75ad3984f7c8edeb2f098f279236cb371 = $this->env->getExtension("native_profiler");
+        $__internal_c699c992a1fb8b50feb3b2c8744b25f75ad3984f7c8edeb2f098f279236cb371->enter($__internal_c699c992a1fb8b50feb3b2c8744b25f75ad3984f7c8edeb2f098f279236cb371_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
 <div class=\"wrapper\">
-        
-<!-- Menú -->
-
-    <div class=\"navbar navbar-inverse navbar-fixed-top\" >
-        <div class=\"container\">
-            <div class=\"navbar-header\">
-                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">
-                    <span class=\"icon-bar\"></span>
-                    <span class=\"icon-bar\"></span>
-                    <span class=\"icon-bar\"></span>
-                </button>
-                <div class=\"logo\"><a class=\"navbar-brand\" href=\"#\"><img src=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/logoblanco.png"), "html", null, true);
-        echo "\" /></a></div>
-            </div>
-            <div class=\"navbar-collapse collapse\">
-                <ul class=\"nav navbar-nav navbar-right\">
-                    <li><a href=\"#\">My progress</a></li>
-                     <li><a href=\"#\">Settings</a></li>
-                    <li><a href=\"#\">Log Out</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
 <!-- Aquí empieza la actividad tipo test -->
 <div class=\"row\">
@@ -76,19 +51,35 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
 
     <h3 class=\"elegir\">Choose the correct answer</h3>
-    <h2>¿How do you initialize an \"int\"?</h2>
-
-    <form>
+            ";
+        // line 18
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["preguntas"]) ? $context["preguntas"] : $this->getContext($context, "preguntas")));
+        foreach ($context['_seq'] as $context["_key"] => $context["pregunta"]) {
+            // line 19
+            echo "
+    <h2>";
+            // line 20
+            echo twig_escape_filter($this->env, $this->getAttribute($context["pregunta"], "enunciado", array()), "html", null, true);
+            echo "</h2>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pregunta'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 22
+        echo "    <form>
     <div class=\"col-md-4 test\">
     <div class=\"col-md-6\">
 
     <div class=\"funkyradio\">
     <div class=\"row\">
-
+        
         <div class=\"funkyradio-primary\">
             <input type=\"radio\" name=\"radio\" id=\"radio1\" />
-            <label for=\"radio1\">int i = 5</label>
+            <label for=\"radio1\">int i</label>
         </div>
+
         <div class=\"funkyradio-primary\">
             <input type=\"radio\" name=\"radio\" id=\"radio2\" />
             <label for=\"radio2\">int i = 5;</label>
@@ -155,7 +146,7 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 
 ";
         
-        $__internal_f0db099932f1165b84ef7d2740593376a4cc6bfa19eed3fc50d008ec04ee26fc->leave($__internal_f0db099932f1165b84ef7d2740593376a4cc6bfa19eed3fc50d008ec04ee26fc_prof);
+        $__internal_c699c992a1fb8b50feb3b2c8744b25f75ad3984f7c8edeb2f098f279236cb371->leave($__internal_c699c992a1fb8b50feb3b2c8744b25f75ad3984f7c8edeb2f098f279236cb371_prof);
 
     }
 
@@ -171,7 +162,7 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 
     public function getDebugInfo()
     {
-        return array (  55 => 17,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  71 => 22,  63 => 20,  60 => 19,  56 => 18,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -179,28 +170,6 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 /* {% block body %}*/
 /* */
 /* <div class="wrapper">*/
-/*         */
-/* <!-- Menú -->*/
-/* */
-/*     <div class="navbar navbar-inverse navbar-fixed-top" >*/
-/*         <div class="container">*/
-/*             <div class="navbar-header">*/
-/*                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">*/
-/*                     <span class="icon-bar"></span>*/
-/*                     <span class="icon-bar"></span>*/
-/*                     <span class="icon-bar"></span>*/
-/*                 </button>*/
-/*                 <div class="logo"><a class="navbar-brand" href="#"><img src="{{ asset('img/logoblanco.png') }}" /></a></div>*/
-/*             </div>*/
-/*             <div class="navbar-collapse collapse">*/
-/*                 <ul class="nav navbar-nav navbar-right">*/
-/*                     <li><a href="#">My progress</a></li>*/
-/*                      <li><a href="#">Settings</a></li>*/
-/*                     <li><a href="#">Log Out</a></li>*/
-/*                 </ul>*/
-/*             </div>*/
-/*         </div>*/
-/*     </div>*/
 /* */
 /* <!-- Aquí empieza la actividad tipo test -->*/
 /* <div class="row">*/
@@ -213,19 +182,22 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 /*     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>*/
 /* */
 /*     <h3 class="elegir">Choose the correct answer</h3>*/
-/*     <h2>¿How do you initialize an "int"?</h2>*/
+/*             {% for pregunta in preguntas %}*/
 /* */
+/*     <h2>{{ pregunta.enunciado }}</h2>*/
+/*         {% endfor %}*/
 /*     <form>*/
 /*     <div class="col-md-4 test">*/
 /*     <div class="col-md-6">*/
 /* */
 /*     <div class="funkyradio">*/
 /*     <div class="row">*/
-/* */
+/*         */
 /*         <div class="funkyradio-primary">*/
 /*             <input type="radio" name="radio" id="radio1" />*/
-/*             <label for="radio1">int i = 5</label>*/
+/*             <label for="radio1">int i</label>*/
 /*         </div>*/
+/* */
 /*         <div class="funkyradio-primary">*/
 /*             <input type="radio" name="radio" id="radio2" />*/
 /*             <label for="radio2">int i = 5;</label>*/

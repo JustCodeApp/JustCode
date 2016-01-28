@@ -4,6 +4,15 @@ namespace JustCode\Bundle\actividadesBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use JustCode\Bundle\actividadesBundle\Entity\Preguntas;
+use JustCode\Bundle\actividadesBundle\Form\PreguntasType;
+
+use JustCode\Bundle\actividadesBundle\Entity\Respuestascorrectas;
+use JustCode\Bundle\actividadesBundle\Form\RespuestascorrectasType;
+
+use JustCode\Bundle\actividadesBundle\Entity\Respuestas;
+use JustCode\Bundle\actividadesBundle\Form\RespuestasType;
+
 class DefaultController extends Controller
 {
     public function indexAction()
@@ -18,7 +27,12 @@ class DefaultController extends Controller
     
      public function testTypeAction()
     {
-        return $this->render('JustCodeactividadesBundle:Default:testType.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $preguntas = $em->getRepository('JustCodeactividadesBundle:Preguntas')->findAll();
+        
+        return $this->render('JustCodeactividadesBundle:Default:testType.html.twig', array(
+            'preguntas' => $preguntas,
+        ));
     }
     
      public function verdaderofalsoAction()

@@ -1,0 +1,24 @@
+respuestascorrectas_index:
+    path:     /
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestascorrectas:index" }
+    methods:  GET
+
+respuestascorrectas_show:
+    path:     /{id}/show
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestascorrectas:show" }
+    methods:  GET
+
+respuestascorrectas_new:
+    path:     /new
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestascorrectas:new" }
+    methods:  [GET, POST]
+
+respuestascorrectas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestascorrectas:edit" }
+    methods:  [GET, POST]
+
+respuestascorrectas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestascorrectas:delete" }
+    methods:  DELETE

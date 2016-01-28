@@ -15,19 +15,22 @@
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
 
     <h3 class="elegir">Choose the correct answer</h3>
-    <h2>¿How do you initialize an "int"?</h2>
+            {% for pregunta in preguntas %}
 
+    <h2>{{ pregunta.enunciado }}</h2>
+        {% endfor %}
     <form>
     <div class="col-md-4 test">
     <div class="col-md-6">
 
     <div class="funkyradio">
     <div class="row">
-
+        
         <div class="funkyradio-primary">
             <input type="radio" name="radio" id="radio1" />
-            <label for="radio1">int i = 5</label>
+            <label for="radio1">int i</label>
         </div>
+
         <div class="funkyradio-primary">
             <input type="radio" name="radio" id="radio2" />
             <label for="radio2">int i = 5;</label>

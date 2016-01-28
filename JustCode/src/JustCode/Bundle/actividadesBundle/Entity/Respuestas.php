@@ -22,6 +22,13 @@ class Respuestas
     private $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="enunciado", type="string", length=250, nullable=false)
+     */
+    private $enunciado;
+
+    /**
      * @var \JustCode\Bundle\actividadesBundle\Entity\Preguntas
      *
      * @ORM\ManyToOne(targetEntity="JustCode\Bundle\actividadesBundle\Entity\Preguntas")
@@ -41,6 +48,30 @@ class Respuestas
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set enunciado
+     *
+     * @param string $enunciado
+     *
+     * @return Respuestas
+     */
+    public function setEnunciado($enunciado)
+    {
+        $this->enunciado = $enunciado;
+
+        return $this;
+    }
+
+    /**
+     * Get enunciado
+     *
+     * @return string
+     */
+    public function getEnunciado()
+    {
+        return $this->enunciado;
     }
 
     /**
