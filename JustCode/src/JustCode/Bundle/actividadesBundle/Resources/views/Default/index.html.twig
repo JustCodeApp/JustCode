@@ -23,22 +23,7 @@
         }}">Verdadero y falso</a>
         </li>
         
-        {% for nivele in niveles %}
-            <tr>
-                <td><a href="{{ path('niveles_show', { 'id': nivele.idniveles }) }}">{{ nivele.idniveles }}</a></td>
-                <td>{{ nivele.textoNivel }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('niveles_show', { 'id': nivele.idniveles }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('niveles_edit', { 'id': nivele.idniveles }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
+        <br>
 
         </ul>
 {% endblock %}

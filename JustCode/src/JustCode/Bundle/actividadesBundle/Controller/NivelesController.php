@@ -24,7 +24,6 @@ class NivelesController extends Controller
 
         $niveles = $em->getRepository('JustCodeactividadesBundle:Niveles')->findAll();
         
-
         return $this->render('niveles/index.html.twig', array(
             'niveles' => $niveles,
         ));

@@ -21,20 +21,20 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3ec1cc5ae3ed4e8529ef9051873b2698ab832888b294afda1fa0ed053abe392f = $this->env->getExtension("native_profiler");
-        $__internal_3ec1cc5ae3ed4e8529ef9051873b2698ab832888b294afda1fa0ed053abe392f->enter($__internal_3ec1cc5ae3ed4e8529ef9051873b2698ab832888b294afda1fa0ed053abe392f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:testType.html.twig"));
+        $__internal_77ad89f96d414606bdbf9cb115c58904b47006d72850afb41055826c9015e0d4 = $this->env->getExtension("native_profiler");
+        $__internal_77ad89f96d414606bdbf9cb115c58904b47006d72850afb41055826c9015e0d4->enter($__internal_77ad89f96d414606bdbf9cb115c58904b47006d72850afb41055826c9015e0d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:testType.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3ec1cc5ae3ed4e8529ef9051873b2698ab832888b294afda1fa0ed053abe392f->leave($__internal_3ec1cc5ae3ed4e8529ef9051873b2698ab832888b294afda1fa0ed053abe392f_prof);
+        $__internal_77ad89f96d414606bdbf9cb115c58904b47006d72850afb41055826c9015e0d4->leave($__internal_77ad89f96d414606bdbf9cb115c58904b47006d72850afb41055826c9015e0d4_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_4e93722033021888eb73a1c0d90ac6540d5fd9a394f74c3abee972c3992c16bc = $this->env->getExtension("native_profiler");
-        $__internal_4e93722033021888eb73a1c0d90ac6540d5fd9a394f74c3abee972c3992c16bc->enter($__internal_4e93722033021888eb73a1c0d90ac6540d5fd9a394f74c3abee972c3992c16bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8d3ef7690f3fe28a806d80e9dc00d9dd9c1b96101c7a256262ef8e983d3c4003 = $this->env->getExtension("native_profiler");
+        $__internal_8d3ef7690f3fe28a806d80e9dc00d9dd9c1b96101c7a256262ef8e983d3c4003->enter($__internal_8d3ef7690f3fe28a806d80e9dc00d9dd9c1b96101c7a256262ef8e983d3c4003_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -51,9 +51,26 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
 
     <h3 class=\"elegir\">Choose the correct answer</h3>
-    <h2>¿How do you initialize an \"int\"?</h2>
-
-    <form>
+    
+    ";
+        // line 19
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["preguntas"]) ? $context["preguntas"] : $this->getContext($context, "preguntas")));
+        foreach ($context['_seq'] as $context["_key"] => $context["pregunta"]) {
+            // line 20
+            echo "    
+        <h2>";
+            // line 21
+            echo twig_escape_filter($this->env, $this->getAttribute($context["pregunta"], "enunciado", array()), "html", null, true);
+            echo "</h2>
+    
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pregunta'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 24
+        echo "    <form>
     <div class=\"col-md-4 test\">
     <div class=\"col-md-6\">
 
@@ -130,7 +147,7 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 
 ";
         
-        $__internal_4e93722033021888eb73a1c0d90ac6540d5fd9a394f74c3abee972c3992c16bc->leave($__internal_4e93722033021888eb73a1c0d90ac6540d5fd9a394f74c3abee972c3992c16bc_prof);
+        $__internal_8d3ef7690f3fe28a806d80e9dc00d9dd9c1b96101c7a256262ef8e983d3c4003->leave($__internal_8d3ef7690f3fe28a806d80e9dc00d9dd9c1b96101c7a256262ef8e983d3c4003_prof);
 
     }
 
@@ -146,7 +163,7 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 
     public function getDebugInfo()
     {
-        return array (  40 => 4,  34 => 3,  11 => 1,);
+        return array (  73 => 24,  64 => 21,  61 => 20,  57 => 19,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -166,8 +183,12 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 /*     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>*/
 /* */
 /*     <h3 class="elegir">Choose the correct answer</h3>*/
-/*     <h2>¿How do you initialize an "int"?</h2>*/
-/* */
+/*     */
+/*     {% for pregunta in preguntas %}*/
+/*     */
+/*         <h2>{{pregunta.enunciado}}</h2>*/
+/*     */
+/*     {% endfor %}*/
 /*     <form>*/
 /*     <div class="col-md-4 test">*/
 /*     <div class="col-md-6">*/
