@@ -1,0 +1,4 @@
+services:
+#    just_codeactividades.example:
+#        class: JustCode\Bundle\actividadesBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

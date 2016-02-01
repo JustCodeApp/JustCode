@@ -1,0 +1,24 @@
+respuestas_index:
+    path:     /
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestas:index" }
+    methods:  GET
+
+respuestas_show:
+    path:     /{id}/show
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestas:show" }
+    methods:  GET
+
+respuestas_new:
+    path:     /new
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestas:new" }
+    methods:  [GET, POST]
+
+respuestas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestas:edit" }
+    methods:  [GET, POST]
+
+respuestas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "JustCodeactividadesBundle:Respuestas:delete" }
+    methods:  DELETE

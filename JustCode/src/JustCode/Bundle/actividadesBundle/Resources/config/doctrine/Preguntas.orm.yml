@@ -1,0 +1,42 @@
+JustCode\Bundle\actividadesBundle\Entity\Preguntas:
+    type: entity
+    table: preguntas
+    uniqueConstraints:
+        UNIQ_38794855E41428B9:
+            columns:
+                - id_correcta
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        enunciado:
+            type: string
+            nullable: false
+            length: 250
+            options:
+                fixed: false
+        dificultad:
+            type: string
+            nullable: false
+            length: 5
+            options:
+                fixed: false
+        idNivel:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_nivel
+        idCorrecta:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_correcta
+    lifecycleCallbacks: {  }

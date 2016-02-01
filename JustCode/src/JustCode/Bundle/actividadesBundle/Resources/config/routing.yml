@@ -1,0 +1,43 @@
+just_codeactividades_respuestas:
+    resource: "@JustCodeactividadesBundle/Resources/config/routing/respuestas.yml"
+    prefix:   /respuestas
+    
+just_codeactividades_respuestascorrectas:
+    resource: "@JustCodeactividadesBundle/Resources/config/routing/respuestascorrectas.yml"
+    prefix:   /respuestascorrectas
+    
+just_codeactividades_preguntas:
+    resource: "@JustCodeactividadesBundle/Resources/config/routing/preguntas.yml"
+    prefix:   /preguntas
+
+just_codeactividades_homepage:
+    path:     /
+    defaults: { _controller: JustCodeactividadesBundle:Default:index }
+
+compilator:
+    path: /compilator
+    defaults: { _controller: JustCodeactividadesBundle:Default:compilator }
+    methods:  [GET]
+    requirements:
+        id:  \d+
+        
+testType:
+    path: /testType
+    defaults: { _controller: JustCodeactividadesBundle:Default:testType }
+    methods:  [GET]
+    requirements:
+        id:  \d+
+
+verdaderofalso:
+    path: /verdaderofalso
+    defaults: { _controller: JustCodeactividadesBundle:Default:verdaderofalso }
+    methods:  [GET]
+    requirements:
+        id:  \d+
+
+principal:
+    path: /principal
+    defaults: { _controller: JustCodeactividadesBundle:Default:principal }
+    methods:  [GET]
+    requirements:
+        id:  \d+

@@ -1,0 +1,40 @@
+JustCode\Bundle\actividadesBundle\Entity\Respuestascorrectas:
+    type: entity
+    table: respuestascorrectas
+    indexes:
+        IDX_6393C1B2FE3B0D62:
+            columns:
+                - id_pregunta
+    uniqueConstraints:
+        UNIQ_6393C1B21F5FEDB5:
+            columns:
+                - respuesta_ok
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        respuestaOk:
+            type: string
+            nullable: false
+            length: 250
+            options:
+                fixed: false
+            column: respuesta_ok
+    manyToOne:
+        idPregunta:
+            targetEntity: Preguntas
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_pregunta:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
