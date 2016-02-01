@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-    </head>
-    <body>
-        <div>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<!-- Bloque alvaro -->
+<div class="fixed">
+
+			<ul id="top-list">
+				<li>
+					<a href="#s2">About us</a>
+				</li>
+				<li>
+					<a href="#s3">Contact</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
                 <a href="{{ path('fos_user_security_logout') }}">
@@ -14,6 +25,86 @@
                 <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
             {% endif %}
         </div>
+		
+		<section id="s1">
+			<img src="{{ asset('img/logogrande(blanco).png') }}">
+			<form class="form-horizontal" id="login">
+		 		<div class="form-group">
+		 			<label for="address" class="control-label col-md-3 label-col">User/Email</label>
+		 			<div class="col-md-6">
+			 			<div class="input-group">
+			 				<div class="input-group-addon">
+						 		<span class="glyphicon glyphicon-user"></span>
+							</div>
+							<input type="text" name="user" id="user" class="form-control" />
+						</div>
+					</div>
+				</div>
+ 		
+				<div class="form-group">
+		 			<label for="address" class="control-label col-md-3 label-col">Password</label>
+		 			<div class="col-md-6">
+			 			<div class="input-group">
+			 				<div class="input-group-addon">
+						 		<span class="glyphicon glyphicon-asterisk"></span>
+							</div>
+							<input type="password" name="password" id="password" class="form-control" />
+						</div>
+					</div>
+				</div>
+				<button type="submit" id="login-button">PLAY</button>
+				<p id="keep-log"><input type="checkbox"> <span>Remember</span><a href="#">SING UP</a></p>
+			</form>
+		</section>
+		<section id="s2">
+			<div class="container">
+				<div class="row" style="margin-left:15px;margin-right:15px;">
+					<div class="col-md-2"></div>
+					<div class="col-md-5">
+						
+					</div>
+					<div class="col-md-3">
+						<div id="about-container">
+							<h3>ABOUT</h3>
+							<p class="about">JustCode is a online aplication where the user learn a programming language with diferent levels of exercises. Start now and know a funny way to learn Java, JavaScript, PHP, HTML, CSS...</p>
+							<p class="about" id="no-title">Learn and play</p>
+							<p class="about">JustCode is a online aplication where the user learn a programming language with diferent levels of exercises. Start now and know a funny way to learn Java, JavaScript, PHP, HTML, CSS...</p>
+						</div>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+		</section>
+		<section id="s3">
+			<div class="container">
+				<div class="row" style="margin-left:15px;margin-right:15px;">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<h4 class="contact">Contact</h4>
+						<p class="contact">Ask us anything, we'll answer your question as soon as we can</p>
+						<form class="form-horizontal" id="login">
+					 		<div class="form-group">
+						 			<div class="input-group">
+										<input type="text" name="user" id="user" class="form-control" placeholder="Name"/>
+									</div>
+							</div>
+							<div class="form-group">
+						 			<div class="input-group">
+										<input type="text" name="user" id="user" class="form-control" placeholder="Email"/>
+									</div>
+							</div>
+							<div class="form-group">
+						 			<div class="input-group">
+										<textarea class="form-control" rows="10" cols="40" placeholder="Message"></textarea>
+									</div>
+							</div>
+							<button type="submit" id="login-button">SEND</button>
+					</form>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+<!-- FIN Bloque alvaro -->
 
         {% if app.request.hasPreviousSession %}
             {% for type, messages in app.session.flashbag.all() %}
@@ -29,5 +120,5 @@
             {% block fos_user_content %}
             {% endblock fos_user_content %}
         </div>
-    </body>
-</html>
+        
+{% endblock %}

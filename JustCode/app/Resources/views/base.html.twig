@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-ie7-codes.css') }}" />
         
         <!-- Otros importes -->
-        {% if (app.request.get('_route') != 'principal') %}
+        {% if (app.request.get('_route') != 'principal' and app.request.get('_route') != 'fos_user_security_login') %}
             <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
             <link rel="stylesheet" href="{{ asset('css/actividades.css') }}" />
             <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
@@ -26,14 +26,14 @@
         {% endif %}
 
         <script src="{{ asset('js/menu.js') }}"></script>
-
-        {% if (app.request.get('_route') == 'principal') %}
+    
+        {% if (app.request.get('_route') == 'principal' or app.request.get('_route') == 'fos_user_security_login') %}
             <link href="{{ asset('css/index.css') }}" rel="stylesheet">
         {% endif %}
     </head>
     <body>
         <!-- Menú -->
-{% if (app.request.get('_route') != 'just_codeactividades_homepage' and app.request.get('_route') != 'principal') %}
+{% if (app.request.get('_route') != 'just_codeactividades_homepage' and app.request.get('_route') != 'principal' and app.request.get('_route') != 'fos_user_security_login') %}
 
     <div class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container">
