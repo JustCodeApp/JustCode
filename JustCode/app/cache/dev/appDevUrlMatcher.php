@@ -333,16 +333,30 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
         not_verdaderofalso:
 
-        // principal
-        if ($pathinfo === '/principal') {
-            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                $allow = array_merge($allow, array('GET', 'HEAD'));
-                goto not_principal;
-            }
+        if (0 === strpos($pathinfo, '/p')) {
+            // principal
+            if ($pathinfo === '/principal') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_principal;
+                }
 
-            return array (  '_controller' => 'JustCode\\Bundle\\actividadesBundle\\Controller\\DefaultController::principalAction',  '_route' => 'principal',);
+                return array (  '_controller' => 'JustCode\\Bundle\\actividadesBundle\\Controller\\DefaultController::principalAction',  '_route' => 'principal',);
+            }
+            not_principal:
+
+            // perfil
+            if ($pathinfo === '/perfil') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_perfil;
+                }
+
+                return array (  '_controller' => 'JustCode\\Bundle\\actividadesBundle\\Controller\\DefaultController::perfilAction',  '_route' => 'perfil',);
+            }
+            not_perfil:
+
         }
-        not_principal:
 
         // homepage
         if (rtrim($pathinfo, '/') === '') {

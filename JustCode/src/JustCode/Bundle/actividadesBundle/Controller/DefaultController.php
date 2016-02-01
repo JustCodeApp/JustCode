@@ -46,5 +46,11 @@ class DefaultController extends Controller
         
     }
     
+    public function perfilAction(){
+        
+        return $this->render('JustCodeactividadesBundle:Default:perfil.html.twig');
+        
+    }
+    
     
 }

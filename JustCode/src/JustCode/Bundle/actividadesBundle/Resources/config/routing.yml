@@ -41,3 +41,10 @@ principal:
     methods:  [GET]
     requirements:
         id:  \d+
+        
+perfil:
+    path: /perfil
+    defaults: { _controller: JustCodeactividadesBundle:Default:perfil }
+    methods:  [GET]
+    requirements:
+        id:  \d+

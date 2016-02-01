@@ -74,6 +74,28 @@ footer {
     padding: 10px;
 }
 
+/* Perfil */
+
+#s1{
+  background:#fff;
+  padding-bottom: 100px;
+}
+#s2{
+  background:#dcdcdc;
+}
+
+.progreso{
+  height: 50px;
+}
+
+.col-md-3{
+  padding-right: 50px;
+}
+
+.input-group{
+  width: 350px;
+}
+
 /*CSS DEL TIPO TEST*/
 
 .funkyradio div {
