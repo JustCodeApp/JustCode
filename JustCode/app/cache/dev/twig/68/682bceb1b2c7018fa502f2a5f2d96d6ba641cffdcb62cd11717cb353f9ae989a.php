@@ -21,20 +21,20 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fca78ef240e080d54a104cd0ffa58eb7d3c503b6e716fe3bbd675f974d1a5d37 = $this->env->getExtension("native_profiler");
-        $__internal_fca78ef240e080d54a104cd0ffa58eb7d3c503b6e716fe3bbd675f974d1a5d37->enter($__internal_fca78ef240e080d54a104cd0ffa58eb7d3c503b6e716fe3bbd675f974d1a5d37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:index.html.twig"));
+        $__internal_12a6953586983d52373178dc4f6d6679b44aab1af6d9239c06cbcfd2608b4264 = $this->env->getExtension("native_profiler");
+        $__internal_12a6953586983d52373178dc4f6d6679b44aab1af6d9239c06cbcfd2608b4264->enter($__internal_12a6953586983d52373178dc4f6d6679b44aab1af6d9239c06cbcfd2608b4264_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fca78ef240e080d54a104cd0ffa58eb7d3c503b6e716fe3bbd675f974d1a5d37->leave($__internal_fca78ef240e080d54a104cd0ffa58eb7d3c503b6e716fe3bbd675f974d1a5d37_prof);
+        $__internal_12a6953586983d52373178dc4f6d6679b44aab1af6d9239c06cbcfd2608b4264->leave($__internal_12a6953586983d52373178dc4f6d6679b44aab1af6d9239c06cbcfd2608b4264_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_618d36548c505ef41ca5423219321c339881d42a8d93892d6c949d44a6035c63 = $this->env->getExtension("native_profiler");
-        $__internal_618d36548c505ef41ca5423219321c339881d42a8d93892d6c949d44a6035c63->enter($__internal_618d36548c505ef41ca5423219321c339881d42a8d93892d6c949d44a6035c63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_41ffffa581b28f5e2e39fd3fd22f41d6e0578cd6c3131dbc885bb52ca0a0fd8c = $this->env->getExtension("native_profiler");
+        $__internal_41ffffa581b28f5e2e39fd3fd22f41d6e0578cd6c3131dbc885bb52ca0a0fd8c->enter($__internal_41ffffa581b28f5e2e39fd3fd22f41d6e0578cd6c3131dbc885bb52ca0a0fd8c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Esto es el índice.</h1>
@@ -66,11 +66,25 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
         // line 23
         echo "\">Verdadero y falso</a>
         </li>
+        
+        <li><a href=\"";
+        // line 26
+        echo $this->env->getExtension('routing')->getUrl("perfil");
+        // line 28
+        echo "\">Perfil</a>
+        </li>
+        
+        <li><a href=\"";
+        // line 31
+        echo $this->env->getExtension('routing')->getUrl("principal");
+        // line 33
+        echo "\">Principal</a>
+        </li>
 
         </ul>
 ";
         
-        $__internal_618d36548c505ef41ca5423219321c339881d42a8d93892d6c949d44a6035c63->leave($__internal_618d36548c505ef41ca5423219321c339881d42a8d93892d6c949d44a6035c63_prof);
+        $__internal_41ffffa581b28f5e2e39fd3fd22f41d6e0578cd6c3131dbc885bb52ca0a0fd8c->leave($__internal_41ffffa581b28f5e2e39fd3fd22f41d6e0578cd6c3131dbc885bb52ca0a0fd8c_prof);
 
     }
 
@@ -86,7 +100,7 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
 
     public function getDebugInfo()
     {
-        return array (  67 => 23,  65 => 21,  60 => 18,  58 => 16,  53 => 13,  51 => 11,  46 => 8,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  81 => 33,  79 => 31,  74 => 28,  72 => 26,  67 => 23,  65 => 21,  60 => 18,  58 => 16,  53 => 13,  51 => 11,  46 => 8,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -112,6 +126,16 @@ class __TwigTemplate_241fc420a541710ddfbb204a3755db23bb2973d18629c04b7f9f2264558
 /*         <li><a href="{{ */
 /*         url('verdaderofalso') */
 /*         }}">Verdadero y falso</a>*/
+/*         </li>*/
+/*         */
+/*         <li><a href="{{ */
+/*         url('perfil') */
+/*         }}">Perfil</a>*/
+/*         </li>*/
+/*         */
+/*         <li><a href="{{ */
+/*         url('principal') */
+/*         }}">Principal</a>*/
 /*         </li>*/
 /* */
 /*         </ul>*/
