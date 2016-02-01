@@ -24,8 +24,14 @@
             <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
             
         {% endif %}
-
+        
+        <!-- FOS BUNDLE PARA URL EN JAVASCRIPT -->
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+        
+        <!-- Scripts (java) -->
         <script src="{{ asset('js/menu.js') }}"></script>
+        <script src="{{ asset('js/ajax.js') }}"></script>
 
         {% if (app.request.get('_route') == 'principal') %}
             <link href="{{ asset('css/index.css') }}" rel="stylesheet">
