@@ -68,49 +68,60 @@ class __TwigTemplate_26c646d6898ec299a9a80b280226ef76c5da7289d5b0257791bd2c544ec
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/socialIconsFont/creativeverse_social-ie7-codes.css"), "html", null, true);
         echo "\" />
         
+            <link href=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/footer.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+            <link href=\"css/circle.css\" rel=\"stylesheet\" type=\"text/css\" />
+        \t<!-- Social Font Codes -->
+        \t<link href=\"css/socialIconsFont/creativeverse_social-codes.css\" rel=\"stylesheet\" type=\"text/css\" />
+        \t<link href=\"css/socialIconsFont/creativeverse_social-embedded.css\" rel=\"stylesheet\" type=\"text/css\" />
+        \t<link href=\"css/socialIconsFont/creativeverse_social-ie7.css\" rel=\"stylesheet\" type=\"text/css\" />
+        \t<link href=\"css/socialIconsFont/creativeverse_social-ie7-codes.css\" rel=\"stylesheet\" type=\"text/css\" />
+     
         <!-- Otros importes -->
         ";
-        // line 21
-        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "principal")) {
-            // line 22
+        // line 29
+        if ((($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "principal") && ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "fos_user_security_login"))) {
+            // line 30
             echo "            <link rel=\"stylesheet\" href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/menu.css"), "html", null, true);
             echo "\" />
             <link rel=\"stylesheet\" href=\"";
-            // line 23
+            // line 31
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/actividades.css"), "html", null, true);
             echo "\" />
             <link rel=\"stylesheet\" href=\"";
-            // line 24
+            // line 32
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/footer.css"), "html", null, true);
             echo "\" />
             
         ";
         }
-        // line 27
+        // line 35
         echo "
         <script src=\"";
-        // line 28
+        // line 36
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/menu.js"), "html", null, true);
         echo "\"></script>
-
+    
         ";
-        // line 30
-        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") == "principal")) {
-            // line 31
+        // line 38
+        if ((($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") == "principal") || ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") == "fos_user_security_login"))) {
+            // line 39
             echo "            <link href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/index.css"), "html", null, true);
             echo "\" rel=\"stylesheet\">
         ";
         }
-        // line 33
+        // line 41
         echo "    </head>
     <body>
         <!-- Menú -->
 ";
-        // line 36
-        if ((($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "just_codeactividades_homepage") && ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "principal"))) {
-            // line 37
+        // line 44
+        if (((($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "just_codeactividades_homepage") && ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "principal")) && ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "fos_user_security_login"))) {
+            // line 45
             echo "
     <div class=\"navbar navbar-inverse navbar-fixed-top\" >
         <div class=\"container\">
@@ -121,9 +132,9 @@ class __TwigTemplate_26c646d6898ec299a9a80b280226ef76c5da7289d5b0257791bd2c544ec
                     <span class=\"icon-bar\"></span>
                 </button>
                 <div class=\"logo\"><a class=\"navbar-brand\" href=\"";
-            // line 46
+            // line 54
             echo $this->env->getExtension('routing')->getUrl("homepage");
-            // line 48
+            // line 56
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/logoblanco.png"), "html", null, true);
             echo "\" /></a></div>
@@ -139,13 +150,13 @@ class __TwigTemplate_26c646d6898ec299a9a80b280226ef76c5da7289d5b0257791bd2c544ec
     </div>
     ";
         }
-        // line 60
+        // line 68
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 61
+        // line 69
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 62
+        // line 70
         echo "    </body>
 </html>";
     }
@@ -161,12 +172,12 @@ class __TwigTemplate_26c646d6898ec299a9a80b280226ef76c5da7289d5b0257791bd2c544ec
     {
     }
 
-    // line 60
+    // line 68
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 61
+    // line 69
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -183,7 +194,7 @@ class __TwigTemplate_26c646d6898ec299a9a80b280226ef76c5da7289d5b0257791bd2c544ec
 
     public function getDebugInfo()
     {
-        return array (  170 => 61,  165 => 60,  160 => 6,  154 => 5,  149 => 62,  146 => 61,  143 => 60,  127 => 48,  125 => 46,  114 => 37,  112 => 36,  107 => 33,  101 => 31,  99 => 30,  94 => 28,  91 => 27,  85 => 24,  81 => 23,  76 => 22,  74 => 21,  68 => 18,  64 => 17,  60 => 16,  56 => 15,  50 => 12,  46 => 11,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  181 => 69,  176 => 68,  171 => 6,  165 => 5,  160 => 70,  157 => 69,  154 => 68,  138 => 56,  136 => 54,  125 => 45,  123 => 44,  118 => 41,  112 => 39,  110 => 38,  105 => 36,  102 => 35,  96 => 32,  92 => 31,  87 => 30,  85 => 29,  73 => 20,  68 => 18,  64 => 17,  60 => 16,  56 => 15,  50 => 12,  46 => 11,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -205,8 +216,16 @@ class __TwigTemplate_26c646d6898ec299a9a80b280226ef76c5da7289d5b0257791bd2c544ec
 /*         <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-ie7.css') }}" />*/
 /*         <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-ie7-codes.css') }}" />*/
 /*         */
+/*             <link href="{{ asset('css/footer.css')}}" rel="stylesheet">*/
+/*             <link href="css/circle.css" rel="stylesheet" type="text/css" />*/
+/*         	<!-- Social Font Codes -->*/
+/*         	<link href="css/socialIconsFont/creativeverse_social-codes.css" rel="stylesheet" type="text/css" />*/
+/*         	<link href="css/socialIconsFont/creativeverse_social-embedded.css" rel="stylesheet" type="text/css" />*/
+/*         	<link href="css/socialIconsFont/creativeverse_social-ie7.css" rel="stylesheet" type="text/css" />*/
+/*         	<link href="css/socialIconsFont/creativeverse_social-ie7-codes.css" rel="stylesheet" type="text/css" />*/
+/*      */
 /*         <!-- Otros importes -->*/
-/*         {% if (app.request.get('_route') != 'principal') %}*/
+/*         {% if (app.request.get('_route') != 'principal' and app.request.get('_route') != 'fos_user_security_login') %}*/
 /*             <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />*/
 /*             <link rel="stylesheet" href="{{ asset('css/actividades.css') }}" />*/
 /*             <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />*/
@@ -214,14 +233,14 @@ class __TwigTemplate_26c646d6898ec299a9a80b280226ef76c5da7289d5b0257791bd2c544ec
 /*         {% endif %}*/
 /* */
 /*         <script src="{{ asset('js/menu.js') }}"></script>*/
-/* */
-/*         {% if (app.request.get('_route') == 'principal') %}*/
+/*     */
+/*         {% if (app.request.get('_route') == 'principal' or app.request.get('_route') == 'fos_user_security_login') %}*/
 /*             <link href="{{ asset('css/index.css') }}" rel="stylesheet">*/
 /*         {% endif %}*/
 /*     </head>*/
 /*     <body>*/
 /*         <!-- Menú -->*/
-/* {% if (app.request.get('_route') != 'just_codeactividades_homepage' and app.request.get('_route') != 'principal') %}*/
+/* {% if (app.request.get('_route') != 'just_codeactividades_homepage' and app.request.get('_route') != 'principal' and app.request.get('_route') != 'fos_user_security_login') %}*/
 /* */
 /*     <div class="navbar navbar-inverse navbar-fixed-top" >*/
 /*         <div class="container">*/
