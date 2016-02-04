@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,6 +17,9 @@
         <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-embedded.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-ie7.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-ie7-codes.css') }}" />
+    
+        
+        <link href="{{ asset('css/circle.css') }}" rel="stylesheet" type="text/css" />
         
         <!-- Otros importes -->
         {% if (app.request.get('_route') != 'principal' and app.request.get('_route') != 'fos_user_security_login') %}
@@ -35,7 +39,7 @@
         <!-- Menú -->
 {% if (app.request.get('_route') != 'just_codeactividades_homepage' and app.request.get('_route') != 'principal' and app.request.get('_route') != 'fos_user_security_login') %}
 
-    <div class="navbar navbar-inverse navbar-fixed-top" >
+    <!--<div class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -55,9 +59,11 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>-->
     {% endif %}
         {% block body %}{% endblock %}
+        
         {% block javascripts %}{% endblock %}
     </body>
+    
 </html>
