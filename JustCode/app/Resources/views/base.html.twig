@@ -22,10 +22,10 @@
             <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
             <link rel="stylesheet" href="{{ asset('css/actividades.css') }}" />
             <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
-            
+            <script src="{{ asset('js/menu.js') }}"></script>
+
         {% endif %}
 
-        <script src="{{ asset('js/menu.js') }}"></script>
     
         {% if (app.request.get('_route') == 'principal' or app.request.get('_route') == 'fos_user_security_login') %}
             <link href="{{ asset('css/index.css') }}" rel="stylesheet">
