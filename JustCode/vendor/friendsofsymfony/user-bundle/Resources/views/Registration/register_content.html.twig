@@ -1,14 +1,12 @@
 {% trans_default_domain 'FOSUserBundle' %}
-<<<<<<< HEAD
-=======
 
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     
-     {{ form_widget(form.username) }}
-     {{ form_widget(form.email) }}
+     Nombre: {{ form_widget(form.username) }} <br>
+     Email: {{ form_widget(form.email) }}<br><br>
     
-     {{ form_widget(form.plainPassword.first) }}
-     {{ form_widget(form.plainPassword.second) }}
+     Contraseña: {{ form_widget(form.plainPassword.first) }}<br>
+     Confirmar contraseña: {{ form_widget(form.plainPassword.second) }}
     
     <div>
        
@@ -16,5 +14,3 @@
     </div>
     
 {{ form_end(form) }}
-
->>>>>>> MergeFOS

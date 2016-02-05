@@ -45,6 +45,11 @@ footer {
     margin-bottom: 50px;
 }
 
+.form-horizontal .form-group {
+    margin-right: 0px;
+    margin-left: -15px;
+}
+
 /*CSS DE VERDADERO Y FALSO*/
 
 .btn-circle.btn-lg {

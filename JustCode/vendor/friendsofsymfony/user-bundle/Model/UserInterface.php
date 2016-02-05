@@ -187,6 +187,14 @@ interface UserInterface extends AdvancedUserInterface, \Serializable
     public function setLastLogin(\DateTime $time = null);
 
     /**
+     * Sets the last login time
+     *
+     * @return string
+     */
+    public function getLastLogin();
+
+
+    /**
      * Never use this to check if this user has access to anything!
      *
      * Use the SecurityContext, or an implementation of AccessDecisionManager

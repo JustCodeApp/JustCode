@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% if (app.request.get('_route') != 'fos_user_security_login') %}
+    {% if (app.request.get('_route') != 'just_codeactividades_homepage') %}
 
     <div class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container">
@@ -17,10 +17,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">My progress</a></li>
+                    <li><a href="{{ path('perfil') }}">My progress</a></li>
                     <li><a href="#">Settings</a></li>
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED")%}
-                    <li><a href="#">Logged as: {{app.user.username}}</a></li>
+                    <li><a href="{{ path('fos_user_profile_show') }}">Logged as: {{app.user.username}}</a></li>
                     <li><a href="{{ path('fos_user_security_logout') }}">Log Out</a></li>
                     {% endif %}
                     

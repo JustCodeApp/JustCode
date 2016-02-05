@@ -1,8 +1,38 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit form-horizontal' } }) }}
+<fieldset>
+    
+    <legend>Editar perfil</legend>
+    
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Username</label> 
+        <div class="col-md-4">
+            {{ form_widget(form.username) }}
+        </div>
+     </div>
+     
+     <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Email</label> 
+        <div class="col-md-4">
+            {{ form_widget(form.email) }}
+        </div>
     </div>
+    
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Password</label> 
+        <div class="col-md-4">
+            {{ form_widget(form.current_password) }}
+        </div>
+    </div>
+    
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="singlebutton"></label>
+      <div class="col-md-4">
+        <input id="singlebutton" type="submit" name="singlebutton" class="btn btn-warning" value="Editar perfil"></button>
+      </div>
+    </div>
+    
+</fieldset>
 {{ form_end(form) }}
