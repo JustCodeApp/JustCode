@@ -30,8 +30,8 @@
 
         {% endif %}
 
-    
-        {% if (app.request.get('_route') == 'principal' or app.request.get('_route') == 'just_codeactividades_homepage') %}
+        {% if (app.request.get('_route') == 'just_codeactividades_homepage' or app.request.get('_route') == 'fos_user_registration_register') %}
+
             <link href="{{ asset('css/index.css') }}" rel="stylesheet">
         {% endif %}
     </head>
