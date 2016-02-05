@@ -27,13 +27,6 @@ h3.elegir{
 
 /* Footer */
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    background-color: black;
-}
 .circle-container {
     background-color: white;
     width: 65px;

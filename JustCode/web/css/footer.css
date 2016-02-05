@@ -2,12 +2,12 @@ footer{
 
 	height: auto;
 	background-color: black;
-	margin: -150px auto 0;
-	width:100%;
 
-	bottom:0;
-	left:0;
+	position:relative;
+	left:0px;
+    bottom:0px;
 	
+	width:100%;
 }
 
 .circle-container{
