@@ -22,7 +22,7 @@
         <link href="{{ asset('css/circle.css') }}" rel="stylesheet" type="text/css" />
         
         <!-- Otros importes -->
-        {% if (app.request.get('_route') != 'principal' and app.request.get('_route') != 'just_codeactividades_homepage') %}
+        {% if (app.request.get('_route') != 'just_codeactividades_homepage') %}
             <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
             <link rel="stylesheet" href="{{ asset('css/actividades.css') }}" />
             <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
@@ -37,7 +37,7 @@
     </head>
     <body>
         <!-- Menú -->
-{% if (app.request.get('_route') != 'just_codeactividades_homepage') %}
+{% if (app.request.get('_route') != 'just_codeactividades_homepage' or app.request.get('_route') != 'fos_user_registration_register') %}
 
     <div class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container">
