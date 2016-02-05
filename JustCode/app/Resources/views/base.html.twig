@@ -37,9 +37,9 @@
     </head>
     <body>
         <!-- Menú -->
-{% if (app.request.get('_route') != 'just_codeactividades_homepage' and app.request.get('_route') != 'principal' and app.request.get('_route') != 'just_codeactividades_homepage') %}
+{% if (app.request.get('_route') != 'just_codeactividades_homepage') %}
 
-    <!--<div class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -53,13 +53,16 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">My progress</a></li>
-                     <li><a href="#">Settings</a></li>
-                    <li><a href="#">Log Out</a></li>
+                    <li><a href="{{ path('perfil') }}">My progress</a></li>
+                    <li><a href="#">Settings</a></li>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED")%}
+                    <li><a href="{{ path('fos_user_profile_show') }}">Logged as: {{app.user.username}}</a></li>
+                    <li><a href="{{ path('fos_user_security_logout') }}">Log Out</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
-    </div>-->
+    </div>
     {% endif %}
         {% block body %}{% endblock %}
         
