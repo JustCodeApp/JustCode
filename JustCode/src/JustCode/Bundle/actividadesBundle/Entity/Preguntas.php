@@ -20,6 +20,11 @@ class Preguntas
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
+    
+   public function __toString()
+    {
+        return strval($this->id);
+    }
 
     /**
      * @var string
@@ -34,6 +39,13 @@ class Preguntas
      * @ORM\Column(name="dificultad", type="string", length=5, nullable=false)
      */
     private $dificultad;
+    
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
 
     /**
      * @var integer
@@ -155,5 +167,29 @@ class Preguntas
     public function getIdCorrecta()
     {
         return $this->idCorrecta;
+    }
+
+    /**
+     * Set tipo
+     *
+     * @param integer $tipo
+     *
+     * @return Preguntas
+     */
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+
+        return $this;
+    }
+
+    /**
+     * Get tipo
+     *
+     * @return integer
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
     }
 }

@@ -20,6 +20,11 @@ class Respuestas
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
+    
+     public function __toString()
+    {
+        return strval($this->id);
+    }
 
     /**
      * @var string

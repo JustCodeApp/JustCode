@@ -39,5 +39,62 @@ class Respuestascorrectas
     private $idPregunta;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set respuestaOk
+     *
+     * @param string $respuestaOk
+     *
+     * @return Respuestascorrectas
+     */
+    public function setRespuestaOk($respuestaOk)
+    {
+        $this->respuestaOk = $respuestaOk;
+
+        return $this;
+    }
+
+    /**
+     * Get respuestaOk
+     *
+     * @return string
+     */
+    public function getRespuestaOk()
+    {
+        return $this->respuestaOk;
+    }
+
+    /**
+     * Set idPregunta
+     *
+     * @param \JustCode\Bundle\actividadesBundle\Entity\Preguntas $idPregunta
+     *
+     * @return Respuestascorrectas
+     */
+    public function setIdPregunta(\JustCode\Bundle\actividadesBundle\Entity\Preguntas $idPregunta = null)
+    {
+        $this->idPregunta = $idPregunta;
+
+        return $this;
+    }
+
+    /**
+     * Get idPregunta
+     *
+     * @return \JustCode\Bundle\actividadesBundle\Entity\Preguntas
+     */
+    public function getIdPregunta()
+    {
+        return $this->idPregunta;
+    }
+}

@@ -11,6 +11,7 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
         $this->parent = $this->loadTemplate("base.html.twig", "JustCodeactividadesBundle:Default:testType.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
+            'javascripts' => array($this, 'block_javascripts'),
         );
     }
 
@@ -21,20 +22,20 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f0bc13ebbd7062fd19faaf101739fc9914f0ba7861552a7b500ba109613b1d44 = $this->env->getExtension("native_profiler");
-        $__internal_f0bc13ebbd7062fd19faaf101739fc9914f0ba7861552a7b500ba109613b1d44->enter($__internal_f0bc13ebbd7062fd19faaf101739fc9914f0ba7861552a7b500ba109613b1d44_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:testType.html.twig"));
+        $__internal_8aa8f6cdb1e20ae2a4c2bf887f7ae668d6907ef3bc73b467dcc97838ee795458 = $this->env->getExtension("native_profiler");
+        $__internal_8aa8f6cdb1e20ae2a4c2bf887f7ae668d6907ef3bc73b467dcc97838ee795458->enter($__internal_8aa8f6cdb1e20ae2a4c2bf887f7ae668d6907ef3bc73b467dcc97838ee795458_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:testType.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f0bc13ebbd7062fd19faaf101739fc9914f0ba7861552a7b500ba109613b1d44->leave($__internal_f0bc13ebbd7062fd19faaf101739fc9914f0ba7861552a7b500ba109613b1d44_prof);
+        $__internal_8aa8f6cdb1e20ae2a4c2bf887f7ae668d6907ef3bc73b467dcc97838ee795458->leave($__internal_8aa8f6cdb1e20ae2a4c2bf887f7ae668d6907ef3bc73b467dcc97838ee795458_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_90a99cd173b35132d015db05cb483a7b09f4de084c8c46a5a6f3a8c2808cbcec = $this->env->getExtension("native_profiler");
-        $__internal_90a99cd173b35132d015db05cb483a7b09f4de084c8c46a5a6f3a8c2808cbcec->enter($__internal_90a99cd173b35132d015db05cb483a7b09f4de084c8c46a5a6f3a8c2808cbcec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6a589b15e717f8a7ae334149a1ff8e1fbd18097b0b7baf76b9f21e4d7120c9dd = $this->env->getExtension("native_profiler");
+        $__internal_6a589b15e717f8a7ae334149a1ff8e1fbd18097b0b7baf76b9f21e4d7120c9dd->enter($__internal_6a589b15e717f8a7ae334149a1ff8e1fbd18097b0b7baf76b9f21e4d7120c9dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -51,24 +52,12 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
 
     <h3 class=\"elegir\">Choose the correct answer</h3>
-            ";
-        // line 18
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["preguntas"]) ? $context["preguntas"] : $this->getContext($context, "preguntas")));
-        foreach ($context['_seq'] as $context["_key"] => $context["pregunta"]) {
-            // line 19
-            echo "
+
     <h2>";
-            // line 20
-            echo twig_escape_filter($this->env, $this->getAttribute($context["pregunta"], "enunciado", array()), "html", null, true);
-            echo "</h2>
-        ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pregunta'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 22
-        echo "    <form>
+        // line 19
+        echo twig_escape_filter($this->env, (isset($context["preguntas"]) ? $context["preguntas"] : $this->getContext($context, "preguntas")), "html", null, true);
+        echo "</h2>
+    <form>
     <div class=\"col-md-4 test\">
     <div class=\"col-md-6\">
 
@@ -76,22 +65,46 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
     <div class=\"row\">
         
         <div class=\"funkyradio-primary\">
-            <input type=\"radio\" name=\"radio\" id=\"radio1\" />
-            <label for=\"radio1\">int i</label>
+            <input type=\"radio\" name=\"radio\" id=\"radio1\" value='";
+        // line 28
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["respuestas"]) ? $context["respuestas"] : $this->getContext($context, "respuestas")), 0, array()), "enunciado", array()), "html", null, true);
+        echo "' class=\"radios\"/>
+            <label for=\"radio1\">";
+        // line 29
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["respuestas"]) ? $context["respuestas"] : $this->getContext($context, "respuestas")), 0, array()), "enunciado", array()), "html", null, true);
+        echo "</label>
         </div>
 
         <div class=\"funkyradio-primary\">
-            <input type=\"radio\" name=\"radio\" id=\"radio2\" />
-            <label for=\"radio2\">int i = 5;</label>
+            <input type=\"radio\" name=\"radio\" id=\"radio2\" value='";
+        // line 33
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["respuestas"]) ? $context["respuestas"] : $this->getContext($context, "respuestas")), 1, array()), "enunciado", array()), "html", null, true);
+        echo "' class=\"radios\"/>
+            <label for=\"radio2\">";
+        // line 34
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["respuestas"]) ? $context["respuestas"] : $this->getContext($context, "respuestas")), 1, array()), "enunciado", array()), "html", null, true);
+        echo "</label>
         </div>
 
         <div class=\"funkyradio-primary\">
-            <input type=\"radio\" name=\"radio\" id=\"radio3\" />
-            <label for=\"radio3\">var i = 5;</label>
+            <input type=\"radio\" name=\"radio\" id=\"radio3\" value='";
+        // line 38
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["correcta"]) ? $context["correcta"] : $this->getContext($context, "correcta")), 0, array()), "respuestaOk", array()), "html", null, true);
+        echo "' class=\"radios\"/>
+            <label for=\"radio3\">";
+        // line 39
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["correcta"]) ? $context["correcta"] : $this->getContext($context, "correcta")), 0, array()), "respuestaOk", array()), "html", null, true);
+        echo "</label>
         </div>
         <div class=\"funkyradio-primary\">
-            <input type=\"radio\" name=\"radio\" id=\"radio4\" />
-            <label for=\"radio4\">\$i = 5;</label>
+            <input type=\"radio\" name=\"radio\" id=\"radio4\" value='";
+        // line 42
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["respuestas"]) ? $context["respuestas"] : $this->getContext($context, "respuestas")), 2, array()), "enunciado", array()), "html", null, true);
+        echo "' class=\"radios\"/>
+            <label for=\"radio4\">";
+        // line 43
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["respuestas"]) ? $context["respuestas"] : $this->getContext($context, "respuestas")), 2, array()), "enunciado", array()), "html", null, true);
+        echo "</label>
         </div>
     </div>
 
@@ -146,7 +159,39 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 
 ";
         
-        $__internal_90a99cd173b35132d015db05cb483a7b09f4de084c8c46a5a6f3a8c2808cbcec->leave($__internal_90a99cd173b35132d015db05cb483a7b09f4de084c8c46a5a6f3a8c2808cbcec_prof);
+        $__internal_6a589b15e717f8a7ae334149a1ff8e1fbd18097b0b7baf76b9f21e4d7120c9dd->leave($__internal_6a589b15e717f8a7ae334149a1ff8e1fbd18097b0b7baf76b9f21e4d7120c9dd_prof);
+
+    }
+
+    // line 97
+    public function block_javascripts($context, array $blocks = array())
+    {
+        $__internal_e5efb51fb1fa3843e4119d3605f6fec61290b067bf60926f83437400a903a2d7 = $this->env->getExtension("native_profiler");
+        $__internal_e5efb51fb1fa3843e4119d3605f6fec61290b067bf60926f83437400a903a2d7->enter($__internal_e5efb51fb1fa3843e4119d3605f6fec61290b067bf60926f83437400a903a2d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 98
+        echo " <script type=\"text/javascript\">
+     var correcte = '";
+        // line 99
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["correcta"]) ? $context["correcta"] : $this->getContext($context, "correcta")), 0, array()), "respuestaOk", array()), "html", null, true);
+        echo "';
+         \$(document).ready(function(){
+           \$('.radios').click(function(){
+               var radio_selec = \$(this).val();
+               if(radio_selec == correcte){
+                   alert('CORRECTO');
+               }else{
+                   alert('ERROR');
+               }
+           });
+  
+        });
+     
+ </script>
+
+";
+        
+        $__internal_e5efb51fb1fa3843e4119d3605f6fec61290b067bf60926f83437400a903a2d7->leave($__internal_e5efb51fb1fa3843e4119d3605f6fec61290b067bf60926f83437400a903a2d7_prof);
 
     }
 
@@ -162,7 +207,7 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 
     public function getDebugInfo()
     {
-        return array (  71 => 22,  63 => 20,  60 => 19,  56 => 18,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  176 => 99,  173 => 98,  167 => 97,  106 => 43,  102 => 42,  96 => 39,  92 => 38,  85 => 34,  81 => 33,  74 => 29,  70 => 28,  58 => 19,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -182,10 +227,8 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 /*     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>*/
 /* */
 /*     <h3 class="elegir">Choose the correct answer</h3>*/
-/*             {% for pregunta in preguntas %}*/
 /* */
-/*     <h2>{{ pregunta.enunciado }}</h2>*/
-/*         {% endfor %}*/
+/*     <h2>{{ preguntas}}</h2>*/
 /*     <form>*/
 /*     <div class="col-md-4 test">*/
 /*     <div class="col-md-6">*/
@@ -194,22 +237,22 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 /*     <div class="row">*/
 /*         */
 /*         <div class="funkyradio-primary">*/
-/*             <input type="radio" name="radio" id="radio1" />*/
-/*             <label for="radio1">int i</label>*/
+/*             <input type="radio" name="radio" id="radio1" value='{{respuestas.0.enunciado}}' class="radios"/>*/
+/*             <label for="radio1">{{respuestas.0.enunciado}}</label>*/
 /*         </div>*/
 /* */
 /*         <div class="funkyradio-primary">*/
-/*             <input type="radio" name="radio" id="radio2" />*/
-/*             <label for="radio2">int i = 5;</label>*/
+/*             <input type="radio" name="radio" id="radio2" value='{{respuestas.1.enunciado}}' class="radios"/>*/
+/*             <label for="radio2">{{respuestas.1.enunciado}}</label>*/
 /*         </div>*/
 /* */
 /*         <div class="funkyradio-primary">*/
-/*             <input type="radio" name="radio" id="radio3" />*/
-/*             <label for="radio3">var i = 5;</label>*/
+/*             <input type="radio" name="radio" id="radio3" value='{{correcta.0.respuestaOk}}' class="radios"/>*/
+/*             <label for="radio3">{{correcta.0.respuestaOk}}</label>*/
 /*         </div>*/
 /*         <div class="funkyradio-primary">*/
-/*             <input type="radio" name="radio" id="radio4" />*/
-/*             <label for="radio4">$i = 5;</label>*/
+/*             <input type="radio" name="radio" id="radio4" value='{{respuestas.2.enunciado}}' class="radios"/>*/
+/*             <label for="radio4">{{respuestas.2.enunciado}}</label>*/
 /*         </div>*/
 /*     </div>*/
 /* */
@@ -261,5 +304,23 @@ class __TwigTemplate_6581dbc5c3273b9a5e9dab7aa99da7ebac9f2c23184e897309257dce581
 /*     </footer>*/
 /* -->*/
 /* </div>*/
+/* */
+/* {% endblock %}*/
+/* {% block javascripts %}*/
+/*  <script type="text/javascript">*/
+/*      var correcte = '{{correcta.0.respuestaOk}}';*/
+/*          $(document).ready(function(){*/
+/*            $('.radios').click(function(){*/
+/*                var radio_selec = $(this).val();*/
+/*                if(radio_selec == correcte){*/
+/*                    alert('CORRECTO');*/
+/*                }else{*/
+/*                    alert('ERROR');*/
+/*                }*/
+/*            });*/
+/*   */
+/*         });*/
+/*      */
+/*  </script>*/
 /* */
 /* {% endblock %}*/

@@ -39,5 +39,62 @@ class Respuestas
     private $idPregunta;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set enunciado
+     *
+     * @param string $enunciado
+     *
+     * @return Respuestas
+     */
+    public function setEnunciado($enunciado)
+    {
+        $this->enunciado = $enunciado;
+
+        return $this;
+    }
+
+    /**
+     * Get enunciado
+     *
+     * @return string
+     */
+    public function getEnunciado()
+    {
+        return $this->enunciado;
+    }
+
+    /**
+     * Set idPregunta
+     *
+     * @param \JustCode\Bundle\actividadesBundle\Entity\Preguntas $idPregunta
+     *
+     * @return Respuestas
+     */
+    public function setIdPregunta(\JustCode\Bundle\actividadesBundle\Entity\Preguntas $idPregunta = null)
+    {
+        $this->idPregunta = $idPregunta;
+
+        return $this;
+    }
+
+    /**
+     * Get idPregunta
+     *
+     * @return \JustCode\Bundle\actividadesBundle\Entity\Preguntas
+     */
+    public function getIdPregunta()
+    {
+        return $this->idPregunta;
+    }
+}

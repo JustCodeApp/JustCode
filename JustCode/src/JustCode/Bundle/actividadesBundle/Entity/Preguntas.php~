@@ -34,6 +34,13 @@ class Preguntas
      * @ORM\Column(name="dificultad", type="string", length=5, nullable=false)
      */
     private $dificultad;
+    
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
 
     /**
      * @var integer
@@ -50,5 +57,110 @@ class Preguntas
     private $idCorrecta;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set enunciado
+     *
+     * @param string $enunciado
+     *
+     * @return Preguntas
+     */
+    public function setEnunciado($enunciado)
+    {
+        $this->enunciado = $enunciado;
+
+        return $this;
+    }
+
+    /**
+     * Get enunciado
+     *
+     * @return string
+     */
+    public function getEnunciado()
+    {
+        return $this->enunciado;
+    }
+
+    /**
+     * Set dificultad
+     *
+     * @param string $dificultad
+     *
+     * @return Preguntas
+     */
+    public function setDificultad($dificultad)
+    {
+        $this->dificultad = $dificultad;
+
+        return $this;
+    }
+
+    /**
+     * Get dificultad
+     *
+     * @return string
+     */
+    public function getDificultad()
+    {
+        return $this->dificultad;
+    }
+
+    /**
+     * Set idNivel
+     *
+     * @param integer $idNivel
+     *
+     * @return Preguntas
+     */
+    public function setIdNivel($idNivel)
+    {
+        $this->idNivel = $idNivel;
+
+        return $this;
+    }
+
+    /**
+     * Get idNivel
+     *
+     * @return integer
+     */
+    public function getIdNivel()
+    {
+        return $this->idNivel;
+    }
+
+    /**
+     * Set idCorrecta
+     *
+     * @param integer $idCorrecta
+     *
+     * @return Preguntas
+     */
+    public function setIdCorrecta($idCorrecta)
+    {
+        $this->idCorrecta = $idCorrecta;
+
+        return $this;
+    }
+
+    /**
+     * Get idCorrecta
+     *
+     * @return integer
+     */
+    public function getIdCorrecta()
+    {
+        return $this->idCorrecta;
+    }
+}

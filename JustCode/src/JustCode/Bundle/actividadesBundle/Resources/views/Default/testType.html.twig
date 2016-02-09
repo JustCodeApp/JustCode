@@ -15,10 +15,8 @@
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
 
     <h3 class="elegir">Choose the correct answer</h3>
-            {% for pregunta in preguntas %}
 
-    <h2>{{ pregunta.enunciado }}</h2>
-        {% endfor %}
+    <h2>{{ preguntas}}</h2>
     <form>
     <div class="col-md-4 test">
     <div class="col-md-6">
@@ -27,22 +25,22 @@
     <div class="row">
         
         <div class="funkyradio-primary">
-            <input type="radio" name="radio" id="radio1" />
-            <label for="radio1">int i</label>
+            <input type="radio" name="radio" id="radio1" value='{{respuestas.0.enunciado}}' class="radios"/>
+            <label for="radio1">{{respuestas.0.enunciado}}</label>
         </div>
 
         <div class="funkyradio-primary">
-            <input type="radio" name="radio" id="radio2" />
-            <label for="radio2">int i = 5;</label>
+            <input type="radio" name="radio" id="radio2" value='{{respuestas.1.enunciado}}' class="radios"/>
+            <label for="radio2">{{respuestas.1.enunciado}}</label>
         </div>
 
         <div class="funkyradio-primary">
-            <input type="radio" name="radio" id="radio3" />
-            <label for="radio3">var i = 5;</label>
+            <input type="radio" name="radio" id="radio3" value='{{correcta.0.respuestaOk}}' class="radios"/>
+            <label for="radio3">{{correcta.0.respuestaOk}}</label>
         </div>
         <div class="funkyradio-primary">
-            <input type="radio" name="radio" id="radio4" />
-            <label for="radio4">$i = 5;</label>
+            <input type="radio" name="radio" id="radio4" value='{{respuestas.2.enunciado}}' class="radios"/>
+            <label for="radio4">{{respuestas.2.enunciado}}</label>
         </div>
     </div>
 
@@ -94,5 +92,22 @@
     </footer>
 -->
 </div>
+
+{% endblock %}
+{% block javascripts %}
+ <script type="text/javascript">
+     var correcte = '{{correcta.0.respuestaOk}}';
+         $(document).ready(function(){
+           $('.radios').click(function(){
+               var radio_selec = $(this).val();
+               if(radio_selec == correcte){
+                   alert('CORRECTO');
+               }else{
+                   alert('ERROR');
+               }
+           });
+        });
+     
+ </script>
 
 {% endblock %}

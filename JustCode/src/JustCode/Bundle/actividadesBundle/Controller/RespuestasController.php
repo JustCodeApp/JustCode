@@ -35,20 +35,20 @@ class RespuestasController extends Controller
      */
     public function newAction(Request $request)
     {
-        $respuesta = new Respuestas();
-        $form = $this->createForm('JustCode\Bundle\actividadesBundle\Form\RespuestasType', $respuesta);
+        $respuestas = new Respuestas();
+        $form = $this->createForm('JustCode\Bundle\actividadesBundle\Form\RespuestasType', $respuestas);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($respuesta);
+            $em->persist($respuestas);
             $em->flush();
 
-            return $this->redirectToRoute('respuestas_show', array('id' => $respuesta->getId()));
+            return $this->redirectToRoute('respuestas_show', array('id' => $respuestas->getId()));
         }
 
         return $this->render('respuestas/new.html.twig', array(
-            'respuesta' => $respuesta,
+            'respuesta' => $respuestas,
             'form' => $form->createView(),
         ));
     }
@@ -57,12 +57,12 @@ class RespuestasController extends Controller
      * Finds and displays a Respuestas entity.
      *
      */
-    public function showAction(Respuestas $respuesta)
+    public function showAction(Respuestas $respuestas)
     {
-        $deleteForm = $this->createDeleteForm($respuesta);
+        $deleteForm = $this->createDeleteForm($respuestas);
 
         return $this->render('respuestas/show.html.twig', array(
-            'respuesta' => $respuesta,
+            'respuesta' => $respuestas,
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -71,22 +71,22 @@ class RespuestasController extends Controller
      * Displays a form to edit an existing Respuestas entity.
      *
      */
-    public function editAction(Request $request, Respuestas $respuesta)
+    public function editAction(Request $request, Respuestas $respuestas)
     {
-        $deleteForm = $this->createDeleteForm($respuesta);
-        $editForm = $this->createForm('JustCode\Bundle\actividadesBundle\Form\RespuestasType', $respuesta);
+        $deleteForm = $this->createDeleteForm($respuestas);
+        $editForm = $this->createForm('JustCode\Bundle\actividadesBundle\Form\RespuestasType', $respuestas);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($respuesta);
+            $em->persist($respuestas);
             $em->flush();
 
-            return $this->redirectToRoute('respuestas_edit', array('id' => $respuesta->getId()));
+            return $this->redirectToRoute('respuestas_edit', array('id' => $respuestas->getId()));
         }
 
         return $this->render('respuestas/edit.html.twig', array(
-            'respuesta' => $respuesta,
+            'respuesta' => $respuestas,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
@@ -96,14 +96,14 @@ class RespuestasController extends Controller
      * Deletes a Respuestas entity.
      *
      */
-    public function deleteAction(Request $request, Respuestas $respuesta)
+    public function deleteAction(Request $request, Respuestas $respuestas)
     {
-        $form = $this->createDeleteForm($respuesta);
+        $form = $this->createDeleteForm($respuestas);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->remove($respuesta);
+            $em->remove($respuestas);
             $em->flush();
         }
 
@@ -113,14 +113,14 @@ class RespuestasController extends Controller
     /**
      * Creates a form to delete a Respuestas entity.
      *
-     * @param Respuestas $respuesta The Respuestas entity
+     * @param Respuestas $respuestas The Respuestas entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Respuestas $respuesta)
+    private function createDeleteForm(Respuestas $respuestas)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('respuestas_delete', array('id' => $respuesta->getId())))
+            ->setAction($this->generateUrl('respuestas_delete', array('id' => $respuestas->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;

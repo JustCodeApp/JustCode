@@ -21,20 +21,20 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_74e19c985a62d2df39e11d3909e9b62a490c3b1ff87ecbdc6c44b078e35ef053 = $this->env->getExtension("native_profiler");
-        $__internal_74e19c985a62d2df39e11d3909e9b62a490c3b1ff87ecbdc6c44b078e35ef053->enter($__internal_74e19c985a62d2df39e11d3909e9b62a490c3b1ff87ecbdc6c44b078e35ef053_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:verdaderofalso.html.twig"));
+        $__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d = $this->env->getExtension("native_profiler");
+        $__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d->enter($__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:verdaderofalso.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_74e19c985a62d2df39e11d3909e9b62a490c3b1ff87ecbdc6c44b078e35ef053->leave($__internal_74e19c985a62d2df39e11d3909e9b62a490c3b1ff87ecbdc6c44b078e35ef053_prof);
+        $__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d->leave($__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7c6ddc712d45490936637624727e2b3d0d788b6f91e32fdb52773121f84e5a93 = $this->env->getExtension("native_profiler");
-        $__internal_7c6ddc712d45490936637624727e2b3d0d788b6f91e32fdb52773121f84e5a93->enter($__internal_7c6ddc712d45490936637624727e2b3d0d788b6f91e32fdb52773121f84e5a93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb = $this->env->getExtension("native_profiler");
+        $__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb->enter($__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -51,8 +51,11 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
 
     <h3 class=\"elegir\">True or False?</h3>
-    <h2>¿Can a class be private?</h2>
-
+    
+         <h1>";
+        // line 19
+        echo twig_escape_filter($this->env, (isset($context["preguntas"]) ? $context["preguntas"] : $this->getContext($context, "preguntas")), "html", null, true);
+        echo "</h1>
     <form>
 
 <br><br>
@@ -116,7 +119,7 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
 </div>
 ";
         
-        $__internal_7c6ddc712d45490936637624727e2b3d0d788b6f91e32fdb52773121f84e5a93->leave($__internal_7c6ddc712d45490936637624727e2b3d0d788b6f91e32fdb52773121f84e5a93_prof);
+        $__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb->leave($__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb_prof);
 
     }
 
@@ -132,7 +135,7 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
 
     public function getDebugInfo()
     {
-        return array (  40 => 4,  34 => 3,  11 => 1,);
+        return array (  57 => 19,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -152,8 +155,8 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
 /*     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>*/
 /* */
 /*     <h3 class="elegir">True or False?</h3>*/
-/*     <h2>¿Can a class be private?</h2>*/
-/* */
+/*     */
+/*          <h1>{{ preguntas }}</h1>*/
 /*     <form>*/
 /* */
 /* <br><br>*/

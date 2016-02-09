@@ -39,4 +39,9 @@ JustCode\Bundle\actividadesBundle\Entity\Preguntas:
             options:
                 unsigned: false
             column: id_correcta
+        tipo:
+            type: integer
+            nullable: false
+            options:
+                fixed: false
     lifecycleCallbacks: {  }
