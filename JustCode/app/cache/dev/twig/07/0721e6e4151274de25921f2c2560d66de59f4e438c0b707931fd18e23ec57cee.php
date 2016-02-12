@@ -11,6 +11,7 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
         $this->parent = $this->loadTemplate("base.html.twig", "JustCodeactividadesBundle:Default:verdaderofalso.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
+            'javascripts' => array($this, 'block_javascripts'),
         );
     }
 
@@ -21,20 +22,20 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d = $this->env->getExtension("native_profiler");
-        $__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d->enter($__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:verdaderofalso.html.twig"));
+        $__internal_a7b059be29f61376edb29a9d253f01187ffd3917bfa3aa42da61fb4b0e10c69b = $this->env->getExtension("native_profiler");
+        $__internal_a7b059be29f61376edb29a9d253f01187ffd3917bfa3aa42da61fb4b0e10c69b->enter($__internal_a7b059be29f61376edb29a9d253f01187ffd3917bfa3aa42da61fb4b0e10c69b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "JustCodeactividadesBundle:Default:verdaderofalso.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d->leave($__internal_9769b0d0bc4dfc1e116ba0a182a3ba964027a7a3c9c3242ba20547cc6b4eae8d_prof);
+        $__internal_a7b059be29f61376edb29a9d253f01187ffd3917bfa3aa42da61fb4b0e10c69b->leave($__internal_a7b059be29f61376edb29a9d253f01187ffd3917bfa3aa42da61fb4b0e10c69b_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb = $this->env->getExtension("native_profiler");
-        $__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb->enter($__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_7fc0a6e28b6386801b449d67907ada55dfce4b348746c451481c0923ce727336 = $this->env->getExtension("native_profiler");
+        $__internal_7fc0a6e28b6386801b449d67907ada55dfce4b348746c451481c0923ce727336->enter($__internal_7fc0a6e28b6386801b449d67907ada55dfce4b348746c451481c0923ce727336_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -63,10 +64,10 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
     <div class=\"row\">
         <div class=\"center\" data-toggle=\"buttons\">
             <div class=\"col-md-6\">
-                  <label class=\"btn btn-info btn-circle btn-lg funkyradio active\"><input type=\"radio\" name=\"q2\" value=\"1\"><i class=\"glyphicon glyphicon-ok\" checked></i></label>
+                  <label class=\"btn btn-info btn-circle btn-lg funkyradio\"><input type=\"radio\" name=\"q2\" value=\"Si\" id=\"boton\"><i class=\"glyphicon glyphicon-ok\"></i></label>
             </div>
-            <div class=\"col-md-6\">
-                  <label class=\"btn btn-danger funkyradio btn-circle btn-lg\"><input type=\"radio\" name=\"q2\" value=\"2\"><i class=\"glyphicon glyphicon-remove\"></i></label>
+            <div class=\"col-md-6\" id=\"divrojo\">
+                  <label class=\"btn btn-danger funkyradio btn-circle btn-lg botonrojo\"><input type=\"radio\" name=\"q2\" value=\"No\" id=\"boton1\"><i class=\"glyphicon glyphicon-remove\"></i></label>
             </div>
         </div>
     </div>
@@ -119,7 +120,33 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
 </div>
 ";
         
-        $__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb->leave($__internal_a37c04b39e95cda2cd36d07f96fd17897c4fae37a6d6933c6c95789b285f7ddb_prof);
+        $__internal_7fc0a6e28b6386801b449d67907ada55dfce4b348746c451481c0923ce727336->leave($__internal_7fc0a6e28b6386801b449d67907ada55dfce4b348746c451481c0923ce727336_prof);
+
+    }
+
+    // line 82
+    public function block_javascripts($context, array $blocks = array())
+    {
+        $__internal_ca7ecb707e49bc770b9349a4dc7515eb58c26de7dc05a8b501c68132936ec319 = $this->env->getExtension("native_profiler");
+        $__internal_ca7ecb707e49bc770b9349a4dc7515eb58c26de7dc05a8b501c68132936ec319->enter($__internal_ca7ecb707e49bc770b9349a4dc7515eb58c26de7dc05a8b501c68132936ec319_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 83
+        echo " <script type=\"text/javascript\">
+  var correcte = '";
+        // line 84
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["correcta"]) ? $context["correcta"] : $this->getContext($context, "correcta")), 0, array()), "respuestaOk", array()), "html", null, true);
+        echo "';
+        \$(document).ready(function(){
+          \$('#boton').change(function(){
+              \$('#divrojo').prop('visibility','hidden');
+          })
+        });
+     
+ </script>
+
+";
+        
+        $__internal_ca7ecb707e49bc770b9349a4dc7515eb58c26de7dc05a8b501c68132936ec319->leave($__internal_ca7ecb707e49bc770b9349a4dc7515eb58c26de7dc05a8b501c68132936ec319_prof);
 
     }
 
@@ -135,7 +162,7 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
 
     public function getDebugInfo()
     {
-        return array (  57 => 19,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  137 => 84,  134 => 83,  128 => 82,  58 => 19,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -164,10 +191,10 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
 /*     <div class="row">*/
 /*         <div class="center" data-toggle="buttons">*/
 /*             <div class="col-md-6">*/
-/*                   <label class="btn btn-info btn-circle btn-lg funkyradio active"><input type="radio" name="q2" value="1"><i class="glyphicon glyphicon-ok" checked></i></label>*/
+/*                   <label class="btn btn-info btn-circle btn-lg funkyradio"><input type="radio" name="q2" value="Si" id="boton"><i class="glyphicon glyphicon-ok"></i></label>*/
 /*             </div>*/
-/*             <div class="col-md-6">*/
-/*                   <label class="btn btn-danger funkyradio btn-circle btn-lg"><input type="radio" name="q2" value="2"><i class="glyphicon glyphicon-remove"></i></label>*/
+/*             <div class="col-md-6" id="divrojo">*/
+/*                   <label class="btn btn-danger funkyradio btn-circle btn-lg botonrojo"><input type="radio" name="q2" value="No" id="boton1"><i class="glyphicon glyphicon-remove"></i></label>*/
 /*             </div>*/
 /*         </div>*/
 /*     </div>*/
@@ -218,4 +245,16 @@ class __TwigTemplate_7a08ac81a2f782f5d1d29f49856c9255219e64baa80f3923040ba912327
 /*     </footer>*/
 /* -->*/
 /* </div>*/
+/* {% endblock %}*/
+/* {% block javascripts %}*/
+/*  <script type="text/javascript">*/
+/*   var correcte = '{{correcta.0.respuestaOk}}';*/
+/*         $(document).ready(function(){*/
+/*           $('#boton').change(function(){*/
+/*               $('#divrojo').prop('visibility','hidden');*/
+/*           })*/
+/*         });*/
+/*      */
+/*  </script>*/
+/* */
 /* {% endblock %}*/

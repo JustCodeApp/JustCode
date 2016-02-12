@@ -25,6 +25,10 @@ h3.elegir{
 	width: 100%;
 }
 
+.escondido{
+  visibility:hid;
+}
+
 /* Footer */
 
 footer {
