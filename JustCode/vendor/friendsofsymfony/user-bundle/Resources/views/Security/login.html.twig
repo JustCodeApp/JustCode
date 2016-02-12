@@ -22,7 +22,7 @@
 		
 		
 		<section id="s1">
-			<img src="{{ asset('img/logogrande(blanco).png') }}">
+			<img src="{{ asset('img/logogrande(blanco).png') }}" alt="Logo grande blanco">
 			<form class="form-horizontal" action="{{ path("fos_user_security_check") }}" method="post" id="login">
 			    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 		 		<div class="form-group">
@@ -47,9 +47,12 @@
 							<input type="password" id="password" name="_password" required="required" class="form-control" />
 						</div>
 					</div>
+				
 				<div id="boton-contenedor" class="col-md-9">
+				<label for="_submit" style="display:none"></label>
 				<input type="submit" id="_submit" name="_submit" value="{{ 'PLAY'|trans }}" />
-				<p id="keep-log"><input type="checkbox" id="remember_me" name="_remember_me" value="on"> <span>Remember</span><a href="{{ asset('fos_user_registration_register') }}">SING UP</a></p>
+				<label for="remember_me" style="display:none"></label>
+				<p id="keep-log"><input type="checkbox" id="remember_me" name="_remember_me" value="on"> <span>Remember</span><a href="{{ asset('register') }}">SING UP</a></p>
 				</div>	
 				</div>
 			
@@ -85,17 +88,20 @@
 						    
 					 		<div class="form-group">
 						 			<div class="input-group">
+										<label for="user" style="display:none"></label>
 										<input type="text" name="user" id="user" class="form-control" placeholder="Name"/>
 									</div>
 							</div>
 							<div class="form-group">
 						 			<div class="input-group">
-										<input type="text" name="user" id="user" class="form-control" placeholder="Email"/>
+						 				<label for="email" style="display:none"></label>
+										<input type="text" name="email" id="email" class="form-control" placeholder="Email"/>
 									</div>
 							</div>
 							<div class="form-group">
 						 			<div class="input-group">
-										<textarea class="form-control" rows="10" cols="40" placeholder="Message"></textarea>
+						 				<label for="message" style="display:none"></label>
+										<textarea id="message" class="form-control" rows="10" cols="40" placeholder="Message"></textarea>
 									</div>
 							</div>
 							<button type="submit" id="login-button">SEND</button>
