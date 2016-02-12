@@ -12,7 +12,7 @@ just_codeactividades_preguntas:
 
 just_codeactividades_homepage:
     path:     /
-    defaults: { _controller: JustCodeactividadesBundle:Default:index }
+    defaults: { _controller: FOSUserBundle:Security:login }
 
 compilator:
     path: /compilator

@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
@@ -16,24 +17,27 @@
         <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-embedded.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-ie7.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/socialIconsFont/creativeverse_social-ie7-codes.css') }}" />
+    
+        
+        <link href="{{ asset('css/circle.css') }}" rel="stylesheet" type="text/css" />
         
         <!-- Otros importes -->
-        {% if (app.request.get('_route') != 'principal') %}
+        {% if (app.request.get('_route') != 'just_codeactividades_homepage' and app.request.get('_route') != 'fos_user_registration_register') %}
             <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
             <link rel="stylesheet" href="{{ asset('css/actividades.css') }}" />
             <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
-            
+            <script src="{{ asset('js/menu.js') }}"></script>
+
         {% endif %}
 
-        <script src="{{ asset('js/menu.js') }}"></script>
+        {% if (app.request.get('_route') == 'just_codeactividades_homepage' or app.request.get('_route') == 'fos_user_registration_register') %}
 
-        {% if (app.request.get('_route') == 'principal') %}
             <link href="{{ asset('css/index.css') }}" rel="stylesheet">
         {% endif %}
     </head>
     <body>
         <!-- Menú -->
-{% if (app.request.get('_route') != 'just_codeactividades_homepage' and app.request.get('_route') != 'principal') %}
+{% if (app.request.get('_route') != 'just_codeactividades_homepage' and app.request.get('_route') != 'fos_user_registration_register' and app.request.get('_route') != 'fos_user_registration_confirmed') %}
 
     <div class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container">
@@ -45,19 +49,36 @@
                 </button>
                 <div class="logo"><a class="navbar-brand" href="{{ 
         url('homepage') 
-        }}"><img src="{{ asset('img/logoblanco.png') }}" /></a></div>
+        }}"><img src="{{ asset('img/logoblanco.png') }}" alt="Logo blanco" /></a></div>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">My progress</a></li>
-                     <li><a href="#">Settings</a></li>
-                    <li><a href="#">Log Out</a></li>
+                    <li><a href="{{ path('perfil') }}">My progress</a></li>
+                    <li><a href="#">Settings</a></li>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED")%}
+                    <li><a href="{{ path('fos_user_profile_show') }}">Logged as: {{app.user.username}}</a></li>
+                    <li><a href="{{ path('fos_user_security_logout') }}">Log Out</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
     </div>
     {% endif %}
+    
+    <div class="barraSuperior">
+      <div class="barraSuperior-container global-nav">
+        <div class="barraSuperior-containerInner u-cf">
+          <span class="barraSuperior barraSuperiorItem--logo">
+            <span class="Icon Icon--large Icon--bird"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+    
         {% block body %}{% endblock %}
+        
         {% block javascripts %}{% endblock %}
+        
     </body>
+    
 </html>

@@ -1,52 +1,59 @@
 *{
-margin:0;
-padding:0;
+	margin:0;
+	padding:0;
 }
 html, body{
-width:100%;
-height:100%;
+	width:100%;
+	height:100%;
 }
 body{
-font-family: 'Helvetica';
-
+	font-family: 'Helvetica';
+	background-color: #1B1B1B;
 }
 a{
-text-decoration:none;
-color:#fff;
+	text-decoration:none;
+	color:#fff;
 }
 a:hover{
-color:#FFC400;
+	color:#FFC400;
 }
 img{
-padding-top:15%;
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 25%;
+	padding-top:15%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
 }
 ul{
-display:inline-block;
+	display:inline-block;
 }
 #s1, #s2, #s3{
-width:100%;
-height:100%;
+	width:100%;
+	height:100vh;
 }
 #s1{
-background:#1B1B1B;
+	background:#1B1B1B;
 }
 #s2{
-background:#fff;
+	background:#fff;
 }
 #s3{
-background:#dcdcdc;
+	background:#dcdcdc;
 }
 .fixed{
-z-index:999;
-position:fixed;
-width:100%;
-background:#1B1B1B;
+	z-index:999;
+	position:fixed;
+	width:100%;
+	background:#1B1B1B;
 }
 #login{
+	padding-top: 3%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 52%;
+}
+.login{
 	padding-top: 3%;
 	display: block;
 	margin-left: auto;
@@ -70,8 +77,8 @@ p{
 	display: inline;
 	margin-right: 10%;
 }
-button{
-	margin-left: 45.5%;
+input[type="submit"]{
+	margin-top:2vh;
 	border-radius: 7px;
 	padding:10px;
 	padding-left: 80px;
@@ -81,9 +88,23 @@ button{
 	background-color: orange;
 	border-color:orange;
 }
+#boton-contenedor{
+	text-align:right;	
+}
+button {
+	margin-left: 45.5%;
+	border-radius: 7px;
+	padding:10px;
+	padding-left: 80px;
+	padding-right: 80px;
+	font-weight: bold;
+	color: white;
+	background-color: orange;
+	border-color:orange;	
+}
 #keep-log{
-	margin-left: 46%;
-	margin-top:2%;
+	margin-top:2vh;
+ text-align:right;
 }
 a{
 	margin-left: 13.5%;
