@@ -48,3 +48,10 @@ perfil:
     methods:  [GET]
     requirements:
         id:  \d+
+        
+trueFalso:
+    path: /trueFalso
+    defaults: { _controller: JustCodeactividadesBundle:Cuestiones:trueFalso }
+    methods:  [GET, POST]
+    requirements:
+        id:  \d+

@@ -72,7 +72,7 @@ class DefaultController extends Controller
         $random_num = rand(0,$n_preg -1);
         $enunciado_preg = strval($res_pregunta[$random_num]['enunciado']);
         $id_preg = $res_pregunta[$random_num]['id'];
-        //var_dump($id_preg);
+        //var_dump($res_pregunta[$random_num]);
         
          $dql_correcta = "SELECT c.respuestaOk FROM JustCodeactividadesBundle:Respuestascorrectas c WHERE c.idPregunta='$id_preg'";
         $query_correcta = $em->createQuery($dql_correcta);
@@ -80,9 +80,14 @@ class DefaultController extends Controller
         //$comprobacion = strval($res_correcta[0]['respuestaOk']);
         
         
+        //Recoger contenido html de una url:
+        
+        $template = $this->forward('JustCodeactividadesBundle:Cuestiones:truefalso.html.twig')->getContent();
+        
         return $this->render('JustCodeactividadesBundle:Default:verdaderofalso.html.twig', array(
             'preguntas' => $enunciado_preg,
             'correcta' => $res_correcta,
+            'plantilla' => $template,
         ));
     }
     
