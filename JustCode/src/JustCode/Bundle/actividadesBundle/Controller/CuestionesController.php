@@ -3,6 +3,7 @@
 namespace JustCode\Bundle\actividadesBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 use JustCode\Bundle\actividadesBundle\Entity\Preguntas;
 use JustCode\Bundle\actividadesBundle\Form\PreguntasType;
@@ -22,6 +23,14 @@ class CuestionesController extends Controller
         
         $em = $this->getDoctrine()->getManager();
         
+        //Redirigir si no esta logueado
+        
+        if($this->getUser() == null){
+
+            return $this->redirectToRoute('fos_user_security_login');
+            
+        }
+        
         $dql = "SELECT a.enunciado,a.id FROM JustCodeactividadesBundle:Preguntas a WHERE a.tipo=1 ORDER BY a.id";
         $query = $em->createQuery($dql);
         $res_pregunta = $query->getResult();
@@ -35,7 +44,6 @@ class CuestionesController extends Controller
         $query_correcta = $em->createQuery($dql_correcta);
         $res_correcta = $query_correcta->getResult();
         //$comprobacion = strval($res_correcta[0]['respuestaOk']);
-        
         
         return $this->render('JustCodeactividadesBundle:Cuestiones:truefalso.html.twig', array(
             'preguntas' => $enunciado_preg,

@@ -3,6 +3,7 @@
 namespace JustCode\Bundle\actividadesBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 use JustCode\Bundle\actividadesBundle\Entity\Preguntas;
 use JustCode\Bundle\actividadesBundle\Form\PreguntasType;
@@ -23,12 +24,32 @@ class DefaultController extends Controller
     
      public function compilatorAction()
     {
+        //Redireccion en caso de que no este logueado
+        
+        $response = new Response();
+        
+        //Redirigir si no esta logueado
+        
+        if($this->getUser() == null){
+
+            return $this->redirectToRoute('fos_user_security_login');
+            
+        }
+        
         return $this->render('JustCodeactividadesBundle:Default:compilator.html.twig');
     }
     
      public function testTypeAction()
     {
         $em = $this->getDoctrine()->getManager();
+        
+        //Redirigir si no esta logueado
+        
+        if($this->getUser() == null){
+
+            return $this->redirectToRoute('fos_user_security_login');
+            
+        }
         
         $dql = "SELECT a.enunciado,a.id FROM JustCodeactividadesBundle:Preguntas a WHERE a.tipo=3 ORDER BY a.id";
         $query = $em->createQuery($dql);
@@ -65,6 +86,14 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         
+        //Redirigir si no esta logueado
+        
+        if($this->getUser() == null){
+
+            return $this->redirectToRoute('fos_user_security_login');
+            
+        }
+        
         $dql = "SELECT a.enunciado,a.id FROM JustCodeactividadesBundle:Preguntas a WHERE a.tipo=1 ORDER BY a.id";
         $query = $em->createQuery($dql);
         $res_pregunta = $query->getResult();
@@ -93,15 +122,30 @@ class DefaultController extends Controller
     
     public function principalAction(){
         
+        //Redirigir si no esta logueado
+        
+        if($this->getUser() == null){
+
+            return $this->redirectToRoute('fos_user_security_login');
+            
+        }
+        
         return $this->render('JustCodeactividadesBundle:Default:principal.html.twig');
         
     }
     
     public function perfilAction(){
         
+        //Redirigir si no esta logueado
+        
+        if($this->getUser() == null){
+
+            return $this->redirectToRoute('fos_user_security_login');
+            
+        }
+        
         return $this->render('JustCodeactividadesBundle:Default:perfil.html.twig');
         
     }
-    
     
 }

@@ -1,7 +1,5 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
-{% trans_default_domain 'FOSUserBundle' %}
-
 {% block fos_user_content %}
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -18,9 +16,7 @@
 				</li>
 			</ul>
 		</div>
-		
-		
-		
+
 		<section id="s1">
 			<img src="{{ asset('img/logogrande(blanco).png') }}" alt="Logo grande blanco">
 			<form class="form-horizontal" action="{{ path("fos_user_security_check") }}" method="post" id="login">
