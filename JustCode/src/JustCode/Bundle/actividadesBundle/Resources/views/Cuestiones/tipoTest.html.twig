@@ -1,0 +1,33 @@
+<div id="formulario" >
+        
+    <h2>{{ preguntas}}</h2>
+    
+    <div class="col-md-4 test">
+    <div class="col-md-6">
+
+    <div class="funkyradio">
+    <div class="row">
+        
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio1" value='{{respuestas.0.enunciado}}' class="radios"/>
+            <label for="radio1">{{respuestas.0.enunciado}}</label>
+        </div>
+
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio2" value='{{respuestas.1.enunciado}}' class="radios"/>
+            <label for="radio2">{{respuestas.1.enunciado}}</label>
+        </div>
+
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio3" value='{{correcta.0.respuestaOk}}' class="radios"/>
+            <label for="radio3">{{correcta.0.respuestaOk}}</label>
+        </div>
+        <div class="funkyradio-primary">
+            <input type="radio" name="radio" id="radio4" value='{{respuestas.2.enunciado}}' class="radios"/>
+            <label for="radio4">{{respuestas.2.enunciado}}</label>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>

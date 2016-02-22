@@ -55,3 +55,10 @@ trueFalso:
     methods:  [GET, POST]
     requirements:
         id:  \d+
+        
+tipoTest:
+    path: /tipoTest
+    defaults: { _controller: JustCodeactividadesBundle:Cuestiones:tipoTest }
+    methods:  [GET, POST]
+    requirements:
+        id:  \d+

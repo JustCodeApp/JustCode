@@ -68,7 +68,7 @@ class DefaultController extends Controller
         $dql_correcta = "SELECT c.respuestaOk FROM JustCodeactividadesBundle:Respuestascorrectas c WHERE c.idPregunta='$id_preg'";
         $query_correcta = $em->createQuery($dql_correcta);
         $res_correcta = $query_correcta->getResult();
-        $comprobacion = strval($res_correcta[0]['respuestaOk']);
+        //$comprobacion = strval($res_correcta[0]['respuestaOk']);
         //var_dump($comprobacion);
         //var_dump($res_pregunta[$random_num]['id']);
         /*var_dump($random_num);
