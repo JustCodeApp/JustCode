@@ -23,6 +23,14 @@ class SecurityController extends Controller
     {
         /** @var $session \Symfony\Component\HttpFoundation\Session\Session */
         $session = $request->getSession();
+        
+        //Redirigir si no esta logueado
+        
+        if($this->getUser() != null){
+
+            return $this->redirectToRoute('perfil');
+            
+        }
 
         if (class_exists('\Symfony\Component\Security\Core\Security')) {
             $authErrorKey = Security::AUTHENTICATION_ERROR;

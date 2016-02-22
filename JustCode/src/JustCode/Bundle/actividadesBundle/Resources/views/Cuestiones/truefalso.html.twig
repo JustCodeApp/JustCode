@@ -1,3 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block javascripts %}
+ <script type="text/javascript">
+
+$(document).ready(function(){
+    $(function(){
+        $('form').submit(function(e){
+            e.preventDefault();
+            var form = $("#formularios");
+            
+            var post_url = "{{ path('tipoTest') }}";
+            console.log(post_url);
+            //post_url = 'p1.php';
+            var post_data = form.serialize();
+            $(form).html('Corrigiendo...');
+
+            $.ajax({
+                type: 'POST',
+                url: post_url,
+                data: post_data,
+                success: function(msg) {
+                    $("#formulario").fadeOut(750, function(){
+                        form.html(msg).fadeIn().delay(1500);
+                    });
+                }
+            });
+        });
+    });
+});
+
+ </script>
+
+{% endblock %}
+
 <div id="formulario" >
     
     <h1>{{ preguntas }}</h1>
