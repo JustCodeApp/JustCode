@@ -101,6 +101,24 @@ h3.elegir{
   width: 350px;
 }
 
+/*CSS VERDADERO FALSO*/
+
+#finalizar{
+  visibility:hidden;
+}
+
+#bien{
+  height:20px;
+  width:20px;
+  visibility:hidden;
+}
+
+#mal{
+  height:20px;
+  width:20px;
+  visibility:hidden;
+}
+
 /*CSS DEL TIPO TEST*/
 
 .funkyradio div {

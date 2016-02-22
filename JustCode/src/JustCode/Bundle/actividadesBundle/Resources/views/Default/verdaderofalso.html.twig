@@ -1,9 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block javascripts %}
- <script type="text/javascript">
+<script type="text/javascript">
+
+var contador=1;
 
 $(document).ready(function(){
+    //ESTA ES LA COMPROBACION! PARA JOUSEP
+    if(contador >= 10){
+        
+        $("#submits").fadeOut(750, function(){
+            $("#finalizar").css('visibility', 'visible').fadeIn(1500);
+        });
+        
+    }else{
+        $("#contador").html("Pregunta "+contador+" de 10");
+    }
+    
     $(function(){
         $('form').submit(function(e){
             e.preventDefault();
@@ -19,8 +32,21 @@ $(document).ready(function(){
                 url: post_url,
                 data: post_data,
                 success: function(msg) {
+                    contador++;
+                    
                     $("#formulario").fadeOut(750, function(){
                         form.html(msg).fadeIn().delay(1500);
+                        //ESTA TAMBE ES LA COMPROBACIÓ!!!
+                        if(contador >= 10){
+        
+                            $("#submits").fadeOut(750, function(){
+                                $("#finalizar").css('visibility', 'visible').fadeIn(1500);
+                            });
+                            
+                        }else{
+                            $("#contador").html("Pregunta "+contador+" de 10");
+                        }
+                        
                     });
                 }
             });
@@ -28,7 +54,7 @@ $(document).ready(function(){
     });
 });
 
- </script>
+</script>
 
 {% endblock %}
 
@@ -41,7 +67,7 @@ $(document).ready(function(){
     <div class="col-sm-2"></div>
     
 <div class="col-sm-8">
-    <h3 class="nivel">JAVA Level 1</h3>
+    <h3 class="nivel">JavaScript Level 1</h3>
     <h1 class="actividad">Activity 03</h1>
 
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
@@ -71,12 +97,27 @@ $(document).ready(function(){
     </div>
 </div>
 
-    <div class="derecha">
-            <a href="#" class="btn btn-lg btn-default ">Skip</a>
-            <input id="skip" type="submit" value="Send" class="btn btn-lg btn-warning" />
-        </div>
+    <div id="submits" class="derecha">
+        <a href="#" class="btn btn-lg btn-default ">Skip</a>
+        <input id="skip" type="submit" value="Send" class="btn btn-lg btn-warning" />
+    </div>
+    
+    <div id="finalizar" class="derecha">
+        <a href="#" class="btn btn-lg btn-success" >Finish</a>
+    </div>
 
     </form>
+    <div id="contador">
+        
+    </div>
+    <span id="bien">
+        <img id="bien" src="{{asset("img/tickCorrecto.png")}}" />
+    </span>
+    
+    <span id="mal">
+        <img id="mal" src="{{asset("img/equisMal.png")}}" />
+    </span>
+    
 </div>
 
 <div class="col-sm-2"></div>
