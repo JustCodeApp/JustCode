@@ -1,4 +1,37 @@
-{% extends "FOSUserBundle::layout.html.twig" %}
+{% extends "base.html.twig" %}
+
+{% block javascripts %}
+ <script type="text/javascript">
+
+$(document).ready(function(){
+    $(function(){
+        $('form').submit(function(e){
+            e.preventDefault();
+            var form = $("#formularios");
+            
+            var post_url = "{{ path('tipoTest') }}";
+            console.log(post_url);
+            //post_url = 'p1.php';
+            var post_data = form.serialize();
+            $(form).html('Corrigiendo...');
+
+            $.ajax({
+                type: 'POST',
+                url: post_url,
+                data: post_data,
+                success: function(msg) {
+                    $("#formulario").fadeOut(750, function(){
+                        form.html(msg).fadeIn().delay(1500);
+                    });
+                }
+            });
+        });
+    });
+});
+
+ </script>
+
+{% endblock %}
 
 {% block body %}
 
@@ -16,8 +49,15 @@
 
     <h3 class="elegir">Choose the correct answer</h3>
 
-    <h2>{{ preguntas}}</h2>
     <form>
+    
+    <div id="formularios">
+    </div>
+        
+<div id="formulario" >
+        
+    <h2>{{ preguntas}}</h2>
+    
     <div class="col-md-4 test">
     <div class="col-md-6">
 
@@ -43,7 +83,7 @@
             <label for="radio4">{{respuestas.2.enunciado}}</label>
         </div>
     </div>
-
+</div>
     </div>
     </div>
 </div>
@@ -90,22 +130,5 @@
     </footer>
 -->
 </div>
-
-{% endblock %}
-{% block javascripts %}
- <script type="text/javascript">
-     var correcte = '{{correcta.0.respuestaOk}}';
-         $(document).ready(function(){
-           $('.radios').click(function(){
-               var radio_selec = $(this).val();
-               if(radio_selec == correcte){
-                   alert('CORRECTO');
-               }else{
-                   alert('ERROR');
-               }
-           });
-        });
-     
- </script>
 
 {% endblock %}

@@ -48,3 +48,17 @@ perfil:
     methods:  [GET]
     requirements:
         id:  \d+
+        
+trueFalso:
+    path: /trueFalso
+    defaults: { _controller: JustCodeactividadesBundle:Cuestiones:trueFalso }
+    methods:  [GET, POST]
+    requirements:
+        id:  \d+
+        
+tipoTest:
+    path: /tipoTest
+    defaults: { _controller: JustCodeactividadesBundle:Cuestiones:tipoTest }
+    methods:  [GET, POST]
+    requirements:
+        id:  \d+

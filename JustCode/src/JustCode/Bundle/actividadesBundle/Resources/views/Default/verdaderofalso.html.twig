@@ -1,13 +1,46 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+ <script type="text/javascript">
+
+$(document).ready(function(){
+    $(function(){
+        $('form').submit(function(e){
+            e.preventDefault();
+            var form = $("#formularios");
+            
+            var post_url = "{{ path('trueFalso') }}";
+            console.log(post_url);
+            //post_url = 'p1.php';
+            var post_data = form.serialize();
+            $(form).html('Corrigiendo...');
+
+            $.ajax({
+                type: 'POST',
+                url: post_url,
+                data: post_data,
+                success: function(msg) {
+                    $("#formulario").fadeOut(750, function(){
+                        form.html(msg).fadeIn().delay(1500);
+                    });
+                }
+            });
+        });
+    });
+});
+
+ </script>
+
+{% endblock %}
+
 {% block body %}
 
 <div class="wrapper">
 
 <!-- Aquí empieza la actividad Verdadero/falso -->
 <div class="row">
-    <div class="col-sm-2">
-</div>
+    <div class="col-sm-2"></div>
+    
 <div class="col-sm-8">
     <h3 class="nivel">JAVA Level 1</h3>
     <h1 class="actividad">Activity 03</h1>
@@ -15,78 +48,40 @@
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
 
     <h3 class="elegir">True or False?</h3>
-    
-         <h1>{{ preguntas }}</h1>
+
     <form>
+        
+    <div id="formularios">
+    </div>
+        
+<div id="formulario" >
+    
+    <h1>{{ preguntas }}</h1>
 
 <br><br>
     
     <div class="row">
         <div class="center" data-toggle="buttons">
             <div class="col-md-6">
-                  <label class="btn btn-info btn-circle btn-lg funkyradio"><input type="radio" name="q2" value="Si" id="boton"><i class="glyphicon glyphicon-ok"></i></label>
+                  <label class="btn btn-info btn-circle btn-lg funkyradio"><input type="radio" name="q1" value="Si" id="boton"><i class="glyphicon glyphicon-ok"></i></label>
             </div>
             <div class="col-md-6" id="divrojo">
                   <label class="btn btn-danger funkyradio btn-circle btn-lg botonrojo"><input type="radio" name="q2" value="No" id="boton1"><i class="glyphicon glyphicon-remove"></i></label>
             </div>
         </div>
     </div>
-        
-        <div class="derecha">
-            <a href="#" class="btn btn-lg btn-default ">Skip</a>
-            <input type="submit" value="Send" class="btn btn-lg btn-warning" />
-        </div>
 </div>
-    
 
+    <div class="derecha">
+            <a href="#" class="btn btn-lg btn-default ">Skip</a>
+            <input id="skip" type="submit" value="Send" class="btn btn-lg btn-warning" />
+        </div>
 
     </form>
+</div>
 
 <div class="col-sm-2"></div>
 
-<!-- Footer     
-
-    <footer>
-        <div class"container">
-            <div class="row" style="margin-left:15px;margin-right:15px;">
-                <div class="col-md-2"></div>
-                <div class="col-md-1">
-                    <div class="circle-container">
-                        <img id="logo-footer" src="img/isologo.png" alt="Logo abreviado">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <ul class="footer-list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Log In</a></li> 
-                        <li><a href="#">Sing Up</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3"><p>All Rights Reserved ©2016</p></div>
-                <div class="col-md-2">
-                    <div id="media-container">
-                        <ul class="cv-social-media" id="media">
-                            <a class="animated fadeIn" href="#"><li id="facebook" class="icon-facebook facebook"></li></a>
-                            <a class="animated fadeIn" href="https://twitter.com/justcodeapp" target="blank"><li id="twitter" class="icon-twitter"></li></a>
-                        </ul><
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-        </div>
-    </footer>
--->
 </div>
-{% endblock %}
-{% block javascripts %}
- <script type="text/javascript">
-  var correcte = '{{correcta.0.respuestaOk}}';
-        $(document).ready(function(){
-          $('#boton').change(function(){
-              alert("ERROR");
-          })
-        });
- </script>
 
 {% endblock %}
