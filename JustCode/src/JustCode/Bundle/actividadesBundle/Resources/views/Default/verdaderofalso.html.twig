@@ -52,6 +52,31 @@ $(document).ready(function(){
             });
         });
     });
+    var correcte = '{{correcta.0.respuestaOk}}';
+          $('#boton').change(function(){
+              var radio_selec = $(this).val();
+              if(radio_selec == correcte){
+                   $('#bien').css('visibility','visible');
+                   $('#divrojo').css('visibility','hidden');
+                   $('#mal').css('visibility','hidden');
+              }else{
+                  $('#mal').css('visibility','visible');
+                  $('#bien').css('visibility','hidden');
+              }
+              
+          });
+          $('#boton1').change(function(){
+              var radio_selec = $(this).val();
+              if(radio_selec == correcte){
+                   $('#bien').css('visibility','visible');
+                   $('#divazul').css('visibility','hidden');
+                   $('#mal').css('visibility','hidden');
+              }else{
+                  $('#mal').css('visibility','visible');
+                  $('#bien').css('visibility','hidden');
+              }
+          });
+        
 });
 
 </script>
@@ -87,8 +112,8 @@ $(document).ready(function(){
     
     <div class="row">
         <div class="center" data-toggle="buttons">
-            <div class="col-md-6">
-                  <label class="btn btn-info btn-circle btn-lg funkyradio"><input type="radio" name="q1" value="Si" id="boton"><i class="glyphicon glyphicon-ok"></i></label>
+            <div class="col-md-6" id="divazul">
+                  <label class="btn btn-info btn-circle btn-lg funkyradio"><input type="radio" name="q1" value="Yes" id="boton"><i class="glyphicon glyphicon-ok"></i></label>
             </div>
             <div class="col-md-6" id="divrojo">
                   <label class="btn btn-danger funkyradio btn-circle btn-lg botonrojo"><input type="radio" name="q2" value="No" id="boton1"><i class="glyphicon glyphicon-remove"></i></label>
@@ -111,11 +136,11 @@ $(document).ready(function(){
         
     </div>
     <span id="bien">
-        <img id="bien" src="{{asset("img/tickCorrecto.png")}}" />
+        <img id="bien2" src="{{asset("img/tickCorrecto.png")}}" />
     </span>
     
     <span id="mal">
-        <img id="mal" src="{{asset("img/equisMal.png")}}" />
+        <img id="mal2" src="{{asset("img/equisMal.png")}}" />
     </span>
     
 </div>

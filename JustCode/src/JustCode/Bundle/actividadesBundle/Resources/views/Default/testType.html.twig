@@ -2,8 +2,20 @@
 
 {% block javascripts %}
  <script type="text/javascript">
+ 
+ var contador =1;
 
 $(document).ready(function(){
+      //ESTA ES LA COMPROBACION! PARA JOUSEP
+    if(contador >= 10){
+        
+        $("#submits").fadeOut(750, function(){
+            $("#finalizar").css('visibility', 'visible').fadeIn(1500);
+        });
+        
+    }else{
+        $("#contador").html("Pregunta "+contador+" de 10");
+    }
     $(function(){
         $('form').submit(function(e){
             e.preventDefault();
@@ -19,13 +31,40 @@ $(document).ready(function(){
                 url: post_url,
                 data: post_data,
                 success: function(msg) {
+                    contador++;
                     $("#formulario").fadeOut(750, function(){
                         form.html(msg).fadeIn().delay(1500);
+                        //ESTA TAMBE ES LA COMPROBACIÓ!!!
+                        if(contador >= 10){
+        
+                            $("#submits").fadeOut(750, function(){
+                                $("#finalizar").css('visibility', 'visible').fadeIn(1500);
+                            });
+                            
+                        }else{
+                            $("#contador").html("Pregunta "+contador+" de 10");
+                        }
                     });
                 }
             });
         });
     });
+    
+     var correcte = '{{correcta.0.respuestaOk}}';
+           $('.radios').click(function(){
+               var radio_selec = $(this).val();
+               if(radio_selec == correcte){
+                   alert('CORRECTO');
+                   //$('#bien').prop('visibility','visible');
+                   $("#bien").css('visibility', 'visible').fadeIn(1500);
+                   $("#mal").css('visibility','hidden');
+               }else{
+                   alert('ERROR');
+                   $("#mal").css('visibility','visible').fadeIn(1500);
+                   $("#bien").css('visibility','hidden');
+               }
+           });
+        
 });
 
  </script>
@@ -92,7 +131,21 @@ $(document).ready(function(){
     <a href="#" class="btn btn-lg btn-default ">Skip</a>
     <input type="submit" value="Send" class="btn btn-lg btn-warning" />
 </div>
+
+  <div id="finalizar" class="derecha">
+        <a href="#" class="btn btn-lg btn-success" >Finish</a>
+    </div>
     </form>
+    <div id="contador">
+        
+    </div>
+    <span id="bien">
+        <img id="bien2"src="{{asset("img/tickCorrecto.png")}}" />
+    </span>
+    
+    <span id="mal">
+        <img id="mal2" src="{{asset("img/equisMal.png")}}"/>
+    </span>
 
 <div class="col-sm-2"></div>
 <!--

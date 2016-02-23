@@ -107,16 +107,12 @@ h3.elegir{
   visibility:hidden;
 }
 
-#bien{
-  height:20px;
-  width:20px;
+#bien,#mal{
   visibility:hidden;
 }
-
-#mal{
+#bien2,#mal2{
   height:20px;
   width:20px;
-  visibility:hidden;
 }
 
 /*CSS DEL TIPO TEST*/
